@@ -35,6 +35,7 @@ enableGitInfo = true
     type = "flexsearch"
 
   [params.highlight]
+    enable = true
     copy = true
     copyNotification = true
 

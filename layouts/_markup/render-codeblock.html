@@ -1,0 +1,24 @@
+{{/*
+  Override de render-codeblock.html para contornar o bug do Hextra
+  que tenta acessar .enable em site.Params.highlight quando ele é um bool.
+  Usa o highlight nativo do Hugo (chroma) com botão de cópia via JS.
+*/}}
+{{- $lang := .Type -}}
+{{- $code := .Inner -}}
+{{- $highlightParams := site.Params.highlight -}}
+{{- $enableCopy := false -}}
+{{- if reflect.IsMap $highlightParams -}}
+  {{- $enableCopy = $highlightParams.copy | default false -}}
+{{- end -}}
+
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group">
+  {{- if $enableCopy -}}
+  <div class="hextra-code-copy-btn hx-absolute hx-right-0 hx-top-0 hx-m-2 hx-opacity-0 hx-transition group-hover:hx-opacity-100">
+    <button class="hx-copy-btn hx-rounded hx-border hx-border-black/5 hx-bg-neutral-100 hx-p-1.5 hx-text-xs hx-text-neutral-600 dark:hx-border-white/10 dark:hx-bg-neutral-800 dark:hx-text-neutral-400"
+            onclick="(function(btn){var pre=btn.closest('.hextra-code-block').querySelector('pre');var t=pre?pre.innerText:'';navigator.clipboard.writeText(t).then(function(){btn.innerText='✓';setTimeout(function(){btn.innerText='⎘'},1500)});})(this)">
+      ⎘
+    </button>
+  </div>
+  {{- end -}}
+  {{ highlight $code $lang "" }}
+</div>
