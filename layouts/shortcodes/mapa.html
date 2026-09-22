@@ -1,0 +1,84 @@
+{{- /*
+  Mapa de conteúdo do blog, gerado a partir de data/roadmap.json.
+
+  Uso:
+    {{< mapa >}}            → todas as trilhas
+    {{< mapa nivel="3" >}}  → só a trilha 3
+
+  Um tópico vira link automaticamente quando existe um post com
+  `roadmap: "<id do tópico>"` no front matter.
+*/ -}}
+{{- $nivel := .Get "nivel" -}}
+
+{{- /* Índice: id do tópico → página publicada */ -}}
+{{- $pub := dict -}}
+{{- range where site.RegularPages "Params.roadmap" "!=" nil -}}
+  {{- $pub = merge $pub (dict (string .Params.roadmap) .) -}}
+{{- end -}}
+
+{{- if not (.Page.Scratch.Get "mapa-css") }}
+{{- .Page.Scratch.Set "mapa-css" true }}
+<style>
+  .mapa { margin-top: 1.5rem; }
+  .mapa-trilha { margin: 2.75rem 0 1rem; }
+  .mapa-trilha:first-child { margin-top: 0; }
+  .mapa-trilha-label { font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; opacity: .6; }
+  .mapa-trilha h2 { margin: .15rem 0 .25rem !important; border: 0 !important; padding: 0 !important; font-size: 1.6rem; font-weight: 700; letter-spacing: -.01em; line-height: 1.25; }
+  .mapa-trilha h2 a { color: inherit; text-decoration: none; }
+  .mapa-trilha h2 a:hover { text-decoration: underline; }
+  .mapa-trilha p { margin: 0 !important; opacity: .75; }
+  .mapa details { border: 1px solid rgba(127,127,127,.25); border-radius: .6rem; margin: .6rem 0; }
+  .mapa summary { cursor: pointer; padding: .75rem 1rem; display: flex; align-items: center; gap: .75rem; list-style: none; }
+  .mapa summary::-webkit-details-marker { display: none; }
+  .mapa summary::after { content: "›"; margin-left: .25rem; opacity: .5; transition: transform .15s; }
+  .mapa details[open] summary::after { transform: rotate(90deg); }
+  .mapa details[open] summary { border-bottom: 1px solid rgba(127,127,127,.2); }
+  .mapa-num { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .75rem; opacity: .55; min-width: 1.5rem; }
+  .mapa-cat { flex: 1; font-weight: 600; }
+  .mapa-count { font-size: .8rem; opacity: .6; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .mapa ul { list-style: none !important; margin: 0 !important; padding: .35rem 1rem .6rem !important; }
+  .mapa li { margin: 0 !important; padding: .35rem 0; display: flex; gap: .6rem; align-items: baseline; font-size: .92rem; line-height: 1.45; }
+  .mapa li::before { content: ""; width: .5rem; height: .5rem; border-radius: 50%; flex-shrink: 0; transform: translateY(-.05rem); border: 1.5px solid currentColor; opacity: .35; }
+  .mapa li.pub::before { background: #16a34a; border-color: #16a34a; opacity: 1; }
+  .mapa li.pub a { font-weight: 500; color: inherit; text-decoration: underline; text-decoration-color: rgba(22,163,74,.55); text-underline-offset: 3px; }
+  .mapa li.pub a:hover { text-decoration-color: currentColor; }
+  .mapa li.breve { opacity: .6; }
+  .mapa-badge { font-size: .7rem; padding: .05rem .45rem; border-radius: 99px; border: 1px solid rgba(127,127,127,.35); white-space: nowrap; margin-left: auto; }
+</style>
+{{- end }}
+
+<div class="mapa not-prose">
+{{- range site.Data.roadmap }}
+  {{- if or (not $nivel) (eq (string .nivel) (string $nivel)) }}
+    {{- if not $nivel }}
+    <div class="mapa-trilha" id="{{ .secao }}">
+      <span class="mapa-trilha-label">{{ .label }}</span>
+      <h2><a href="{{ relURL .secao }}/">{{ .titulo }}</a></h2>
+      <p>{{ .descricao }}</p>
+    </div>
+    {{- end }}
+    {{- range .categorias }}
+      {{- $total := len .itens -}}
+      {{- $feitos := 0 -}}
+      {{- range .itens }}{{ if index $pub .id }}{{ $feitos = add $feitos 1 }}{{ end }}{{ end }}
+      <details{{ if gt $feitos 0 }} open{{ end }}>
+        <summary>
+          <span class="mapa-num">{{ .num }}</span>
+          <span class="mapa-cat">{{ .titulo }}</span>
+          <span class="mapa-count">{{ $feitos }}/{{ $total }}</span>
+        </summary>
+        <ul>
+        {{- range .itens }}
+          {{- $item := . }}
+          {{- with index $pub $item.id }}
+          <li class="pub"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+          {{- else }}
+          <li class="breve"><span>{{ $item.texto }}</span><span class="mapa-badge">em breve</span></li>
+          {{- end }}
+        {{- end }}
+        </ul>
+      </details>
+    {{- end }}
+  {{- end }}
+{{- end }}
+</div>

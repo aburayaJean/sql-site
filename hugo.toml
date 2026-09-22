@@ -1,12 +1,12 @@
 baseURL = "https://aburayaJean.github.io/sql-site/"
 languageCode = "pt-BR"
-title = "Precisando de SQL? Chegou ao lugar certo."
+title = "SQL with Jean"
 theme = "hextra"
 defaultContentLanguage = "pt"
 enableRobotsTXT = true
 enableGitInfo = true
 
-# Permite HTML cru no Markdown (botões de contato, download etc.)
+# Permite HTML cru no Markdown (botões, <details> etc.)
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
@@ -15,9 +15,9 @@ enableGitInfo = true
     noClasses = false
 
 [params]
-  description = "Aqui temos o objetivo de compartilhar conhecimento, compartilhar scripts, ajudar com tarefas simples e complexas. Sinta-se em casa e entre em contato se precisar de ajuda."
+  description = "SQL Server do zero ao plano de execução. Posts com conceito e prática, scripts prontos e um mapa com tudo o que vem pela frente."
   displayUpdatedDate = false
-  dateFormat = "02 Jan 2006"
+  dateFormat = "02/01/2006"
 
   [params.navbar]
     displayTitle = true
@@ -41,29 +41,40 @@ enableGitInfo = true
 
 [menu]
   [[menu.main]]
-    name = "Teoria"
-    pageRef = "/teoria"
+    name = "Comece aqui"
+    pageRef = "/fundamentos/por-onde-comecar/o-que-e-um-banco-de-dados"
     weight = 10
 
   [[menu.main]]
-    name = "Prática"
-    pageRef = "/pratica"
+    name = "Mapa"
+    pageRef = "/mapa"
     weight = 20
+
+  [[menu.main]]
+    name = "Scripts"
+    pageRef = "/scripts"
+    weight = 30
 
   [[menu.main]]
     name = "Downloads"
     pageRef = "/downloads"
-    weight = 30
+    weight = 40
 
   [[menu.main]]
     name = "Contato"
     pageRef = "/contato"
-    weight = 40
+    weight = 50
+
+  [[menu.main]]
+    name = "Buscar"
+    weight = 60
+    [menu.main.params]
+      type = "search"
 
   [[menu.main]]
     name = "GitHub"
     url = "https://github.com/aburayaJean/sql-site"
-    weight = 50
+    weight = 70
     [menu.main.params]
       type = "icon"
       icon = "github"

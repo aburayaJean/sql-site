@@ -1,0 +1,3389 @@
+[
+ {
+  "nivel": 1,
+  "secao": "fundamentos",
+  "label": "Trilha 1",
+  "titulo": "Fundamentos",
+  "descricao": "Do zero ao primeiro SELECT com confiança",
+  "categorias": [
+   {
+    "id": "fundamentos",
+    "num": "00",
+    "titulo": "Fundamentos — por onde começar",
+    "itens": [
+     {
+      "id": "oque-banco",
+      "texto": "O que é um banco de dados — e por que você precisa de um"
+     },
+     {
+      "id": "sgbd",
+      "texto": "Relacional vs NoSQL — e onde o SQL Server fica entre PostgreSQL, MySQL e Oracle"
+     },
+     {
+      "id": "sql-intro",
+      "texto": "O que é SQL — e o que é T-SQL, o “sotaque” do SQL Server"
+     },
+     {
+      "id": "sublinguagens",
+      "texto": "DDL, DML, DQL, DCL e TCL — as cinco famílias de comandos"
+     },
+     {
+      "id": "instancia-banco",
+      "texto": "Instância, banco, schema e tabela — a hierarquia de objetos do SQL Server"
+     },
+     {
+      "id": "cliente-servidor",
+      "texto": "Cliente-servidor — como a aplicação conversa com o banco: conexão, sessão e batch"
+     },
+     {
+      "id": "ordem-logica",
+      "texto": "Ordem lógica de execução — FROM, WHERE, GROUP BY, HAVING, SELECT, ORDER BY"
+     },
+     {
+      "id": "null-logica",
+      "texto": "NULL e a lógica de três valores — TRUE, FALSE e UNKNOWN"
+     },
+     {
+      "id": "set-based",
+      "texto": "Pensar em conjuntos, não em linhas — a virada de chave de quem vem da programação"
+     }
+    ]
+   },
+   {
+    "id": "ambiente",
+    "num": "01",
+    "titulo": "Ambiente e Ferramentas — primeiros passos",
+    "itens": [
+     {
+      "id": "edicoes-escolha",
+      "texto": "Qual edição instalar — Developer (grátis e completa), Express, Standard ou Enterprise"
+     },
+     {
+      "id": "ambiente",
+      "texto": "Instalar o SQL Server Developer no Windows, passo a passo"
+     },
+     {
+      "id": "docker",
+      "texto": "SQL Server em Docker — uma instância rodando em 1 minuto no Mac, Linux ou Windows"
+     },
+     {
+      "id": "ssms-instalar",
+      "texto": "Instalar o SSMS e conhecer a interface — Object Explorer, Query Editor, Results e Messages"
+     },
+     {
+      "id": "ssms-intro",
+      "texto": "Conectando à instância — Windows vs SQL auth, named instances, portas e “Trust server certificate”"
+     },
+     {
+      "id": "ssms-atalhos",
+      "texto": "Atalhos e produtividade no SSMS — F5, Ctrl+E, Ctrl+L, Ctrl+M, Alt+F1, seleção em bloco, snippets"
+     },
+     {
+      "id": "ssms-resultados",
+      "texto": "Resultados em grid, texto e arquivo — copiar com cabeçalho e exportar"
+     },
+     {
+      "id": "vscode-mssql",
+      "texto": "VS Code + extensão MSSQL — a alternativa leve ao SSMS (o Azure Data Studio foi aposentado)"
+     },
+     {
+      "id": "sqlcmd",
+      "texto": "sqlcmd — rodar T-SQL pela linha de comando"
+     },
+     {
+      "id": "bancos-exemplo",
+      "texto": "Bancos de exemplo — AdventureWorks, WideWorldImporters e StackOverflow para praticar"
+     },
+     {
+      "id": "batch-go",
+      "texto": "Batches e GO — o que o GO faz (e por que ele não é T-SQL)"
+     },
+     {
+      "id": "estilo-codigo",
+      "texto": "Estilo de código SQL — formatação, nomes, comentários, [colchetes] e por que evitar SELECT *"
+     }
+    ]
+   },
+   {
+    "id": "modelagem",
+    "num": "02",
+    "titulo": "Modelagem Relacional",
+    "itens": [
+     {
+      "id": "niveis-modelo",
+      "texto": "Modelo conceitual, lógico e físico — do rabisco no papel ao CREATE TABLE"
+     },
+     {
+      "id": "er",
+      "texto": "Diagrama ER — entidades, atributos e relacionamentos"
+     },
+     {
+      "id": "cardinalidade",
+      "texto": "Cardinalidade — 1:1, 1:N, N:N e a tabela associativa"
+     },
+     {
+      "id": "chaves",
+      "texto": "Tipos de chave — candidata, primária, alternativa, estrangeira, natural e surrogate"
+     },
+     {
+      "id": "dep-funcional",
+      "texto": "Dependência funcional — a base da normalização"
+     },
+     {
+      "id": "1fn",
+      "texto": "1ª Forma Normal (1FN) — atomicidade e grupos repetidos"
+     },
+     {
+      "id": "2fn",
+      "texto": "2ª Forma Normal (2FN) — dependência funcional total"
+     },
+     {
+      "id": "3fn",
+      "texto": "3ª Forma Normal (3FN) — dependência transitiva"
+     },
+     {
+      "id": "bcnf",
+      "texto": "BCNF — Boyce-Codd, quando a 3FN não é suficiente"
+     },
+     {
+      "id": "4fn",
+      "texto": "4ª Forma Normal (4FN) — dependências multivaloradas"
+     },
+     {
+      "id": "5fn",
+      "texto": "5ª Forma Normal (5FN / PJNF) — dependências de junção"
+     },
+     {
+      "id": "6fn",
+      "texto": "6ª Forma Normal (6FN) — onde ela aparece na prática: dados temporais e Data Vault"
+     },
+     {
+      "id": "desnorm",
+      "texto": "Desnormalização — quando é válido quebrar as regras de propósito"
+     },
+     {
+      "id": "anti-padroes-modelo",
+      "texto": "Anti-padrões — EAV, listas separadas por vírgula, colunas “multiuso” e a tabela-Deus"
+     },
+     {
+      "id": "nomenclatura",
+      "texto": "Convenções de nomenclatura — tabelas, colunas, constraints e índices"
+     },
+     {
+      "id": "dicionario",
+      "texto": "Documentar o modelo — Extended Properties e dicionário de dados"
+     }
+    ]
+   },
+   {
+    "id": "tipos",
+    "num": "03",
+    "titulo": "Tipos de Dados",
+    "itens": [
+     {
+      "id": "tipos",
+      "texto": "Por que o tipo certo importa — espaço, performance e integridade"
+     },
+     {
+      "id": "tipo-inteiros",
+      "texto": "Inteiros — TINYINT, SMALLINT, INT, BIGINT e o dia em que o INT estourou"
+     },
+     {
+      "id": "tipo-decimal",
+      "texto": "DECIMAL/NUMERIC vs FLOAT/REAL vs MONEY — nunca use FLOAT para dinheiro"
+     },
+     {
+      "id": "tipo-texto",
+      "texto": "CHAR, VARCHAR, NCHAR, NVARCHAR — Unicode, fixo vs variável e o custo do (MAX)"
+     },
+     {
+      "id": "collation",
+      "texto": "Collation — case/accent sensitive, _CI_AS, conflito de collation e UTF-8 (2019+)"
+     },
+     {
+      "id": "tipo-data",
+      "texto": "DATE, TIME, DATETIME2, DATETIMEOFFSET — e por que evitar o velho DATETIME"
+     },
+     {
+      "id": "tipo-guid",
+      "texto": "UNIQUEIDENTIFIER — NEWID vs NEWSEQUENTIALID e GUID como chave clustered"
+     },
+     {
+      "id": "tipo-outros",
+      "texto": "BIT, VARBINARY, ROWVERSION e SQL_VARIANT — os tipos que ninguém explica"
+     },
+     {
+      "id": "tipo-especiais",
+      "texto": "Tipos especiais — XML, JSON (nativo no 2025), VECTOR, GEOGRAPHY/GEOMETRY e HIERARCHYID"
+     },
+     {
+      "id": "tipo-conversao",
+      "texto": "CAST, CONVERT, TRY_CAST, TRY_CONVERT e PARSE — conversões explícitas"
+     },
+     {
+      "id": "tipo-precedencia",
+      "texto": "Conversão implícita e precedência de tipos — o assassino silencioso de índices"
+     },
+     {
+      "id": "tipo-alias",
+      "texto": "Tipos definidos pelo usuário (alias types) — quando fazem sentido"
+     }
+    ]
+   },
+   {
+    "id": "ddl",
+    "num": "04",
+    "titulo": "DDL — Criando Estruturas",
+    "itens": [
+     {
+      "id": "create-db",
+      "texto": "CREATE DATABASE — o mínimo para criar um banco (e o que acontece por trás)"
+     },
+     {
+      "id": "create",
+      "texto": "CREATE TABLE — sintaxe, opções e boas práticas"
+     },
+     {
+      "id": "schema",
+      "texto": "SCHEMA — organizar objetos por domínio dentro do banco"
+     },
+     {
+      "id": "alter",
+      "texto": "ALTER TABLE — adicionar, alterar e remover colunas sem perder dados"
+     },
+     {
+      "id": "drop",
+      "texto": "DROP vs TRUNCATE vs DELETE — log, identity, permissões e triggers"
+     },
+     {
+      "id": "drop-if-exists",
+      "texto": "DROP IF EXISTS e CREATE OR ALTER — scripts reexecutáveis"
+     },
+     {
+      "id": "select-into",
+      "texto": "SELECT INTO — criar uma tabela a partir de uma consulta"
+     },
+     {
+      "id": "computed",
+      "texto": "Colunas calculadas — virtuais vs PERSISTED"
+     },
+     {
+      "id": "sparse",
+      "texto": "Colunas SPARSE e column sets — muitas colunas quase sempre NULL"
+     },
+     {
+      "id": "synonym",
+      "texto": "Sinônimos — apelidos para objetos, inclusive de outros bancos"
+     },
+     {
+      "id": "sys-catalog",
+      "texto": "Catalog views — sys.tables, sys.columns, sys.objects e INFORMATION_SCHEMA"
+     }
+    ]
+   },
+   {
+    "id": "constraints",
+    "num": "05",
+    "titulo": "Constraints — Integridade de Dados",
+    "itens": [
+     {
+      "id": "pk",
+      "texto": "Primary Key — o que o banco cria internamente quando você define uma PK"
+     },
+     {
+      "id": "pk-composta",
+      "texto": "PK composta — quando usar, quando evitar"
+     },
+     {
+      "id": "fk",
+      "texto": "Foreign Key — integridade referencial, NO ACTION, CASCADE, SET NULL e SET DEFAULT"
+     },
+     {
+      "id": "fk-indice",
+      "texto": "FK precisa de índice? — o SQL Server não cria sozinho"
+     },
+     {
+      "id": "unique",
+      "texto": "UNIQUE — diferença para PK, UNIQUE em múltiplas colunas e o NULL"
+     },
+     {
+      "id": "not-null",
+      "texto": "NOT NULL — impacto em queries, planos e armazenamento"
+     },
+     {
+      "id": "check",
+      "texto": "CHECK — validação no banco, não só na aplicação"
+     },
+     {
+      "id": "default",
+      "texto": "DEFAULT — valores padrão e quando fazem sentido"
+     },
+     {
+      "id": "constraint-nomes",
+      "texto": "Nomear constraints — por que nunca aceitar o nome gerado (PK__Cliente__3213E83F)"
+     },
+     {
+      "id": "untrusted",
+      "texto": "Constraints não confiáveis (WITH NOCHECK) — como elas enganam o otimizador"
+     }
+    ]
+   },
+   {
+    "id": "dml",
+    "num": "06",
+    "titulo": "DML — Inserindo, Alterando e Apagando",
+    "itens": [
+     {
+      "id": "insert",
+      "texto": "INSERT — simples, múltiplas linhas, INSERT INTO SELECT e INSERT EXEC"
+     },
+     {
+      "id": "identity-retorno",
+      "texto": "Recuperar o ID gerado — SCOPE_IDENTITY vs @@IDENTITY vs IDENT_CURRENT vs OUTPUT"
+     },
+     {
+      "id": "update",
+      "texto": "UPDATE — com JOIN, com subquery e com segurança (BEGIN TRAN, conferir, COMMIT)"
+     },
+     {
+      "id": "delete",
+      "texto": "DELETE — com filtro, com JOIN e soft delete"
+     },
+     {
+      "id": "output",
+      "texto": "OUTPUT — capturar o que foi inserido, alterado ou apagado"
+     },
+     {
+      "id": "merge",
+      "texto": "MERGE — upsert em um comando só, e as armadilhas que ninguém conta"
+     },
+     {
+      "id": "dml-lotes",
+      "texto": "DML em lotes — apagar ou alterar milhões de linhas sem travar o banco nem estourar o log"
+     },
+     {
+      "id": "bulk-insert",
+      "texto": "BULK INSERT e OPENROWSET(BULK) — carregar CSV direto no banco"
+     }
+    ]
+   },
+   {
+    "id": "select",
+    "num": "07",
+    "titulo": "Consultas — SELECT",
+    "itens": [
+     {
+      "id": "select-basico",
+      "texto": "SELECT básico — projeção, alias e literais"
+     },
+     {
+      "id": "where",
+      "texto": "WHERE — operadores, BETWEEN, IN, IS NULL, AND/OR e precedência"
+     },
+     {
+      "id": "like",
+      "texto": "LIKE e curingas — %, _, [], ESCAPE e por que '%texto' não usa índice"
+     },
+     {
+      "id": "order-limit",
+      "texto": "ORDER BY, DISTINCT e TOP (WITH TIES, PERCENT)"
+     },
+     {
+      "id": "paginacao",
+      "texto": "Paginação — OFFSET/FETCH e o problema da página 10.000 (keyset pagination)"
+     },
+     {
+      "id": "ordem-garantida",
+      "texto": "Sem ORDER BY não existe ordem — o mito da ordem “natural”"
+     },
+     {
+      "id": "case",
+      "texto": "CASE WHEN — lógica condicional dentro da query"
+     },
+     {
+      "id": "iif-choose",
+      "texto": "IIF e CHOOSE — atalhos para o CASE"
+     },
+     {
+      "id": "null-funcoes",
+      "texto": "ISNULL vs COALESCE vs NULLIF — diferenças de tipo e comportamento"
+     },
+     {
+      "id": "is-distinct",
+      "texto": "IS [NOT] DISTINCT FROM (2022) — comparar valores tratando NULL do jeito certo"
+     }
+    ]
+   },
+   {
+    "id": "funcoes",
+    "num": "08",
+    "titulo": "Funções Nativas",
+    "itens": [
+     {
+      "id": "func-texto",
+      "texto": "Texto — LEN vs DATALENGTH, SUBSTRING, CHARINDEX, PATINDEX, REPLACE, TRIM, CONCAT_WS, TRANSLATE, STUFF"
+     },
+     {
+      "id": "string-split-agg",
+      "texto": "STRING_SPLIT e STRING_AGG — de lista para linhas e de linhas para lista"
+     },
+     {
+      "id": "func-data",
+      "texto": "Datas — GETDATE vs SYSDATETIME, DATEADD, DATEDIFF, DATEPART, EOMONTH, DATEFROMPARTS"
+     },
+     {
+      "id": "func-data-2022",
+      "texto": "DATETRUNC, DATE_BUCKET e GENERATE_SERIES (2022) — agrupar por período e gerar sequências"
+     },
+     {
+      "id": "timezone",
+      "texto": "Fuso horário — AT TIME ZONE, DATETIMEOFFSET e UTC vs horário de Brasília"
+     },
+     {
+      "id": "func-num",
+      "texto": "Numéricas — ROUND, FLOOR, CEILING, ABS, POWER, % (módulo) e RAND"
+     },
+     {
+      "id": "greatest-least",
+      "texto": "GREATEST e LEAST (2022)"
+     },
+     {
+      "id": "format-cuidado",
+      "texto": "FORMAT — prático e lento: quando evitar"
+     },
+     {
+      "id": "func-sistema",
+      "texto": "Funções de sistema — @@ROWCOUNT, @@SPID, DB_NAME, OBJECT_ID, SUSER_SNAME, SERVERPROPERTY"
+     },
+     {
+      "id": "regex",
+      "texto": "Expressões regulares no T-SQL (2025) — REGEXP_LIKE, REGEXP_REPLACE, REGEXP_SUBSTR"
+     },
+     {
+      "id": "fuzzy",
+      "texto": "Fuzzy matching (2025) — EDIT_DISTANCE e JARO_WINKLER para achar nomes parecidos"
+     }
+    ]
+   },
+   {
+    "id": "agregacao",
+    "num": "09",
+    "titulo": "Agregação e Agrupamento",
+    "itens": [
+     {
+      "id": "agregacao",
+      "texto": "COUNT, SUM, AVG, MIN, MAX — e COUNT(*) vs COUNT(coluna) vs COUNT(DISTINCT)"
+     },
+     {
+      "id": "group-having",
+      "texto": "GROUP BY e HAVING — a diferença entre WHERE e HAVING"
+     },
+     {
+      "id": "agregacao-condicional",
+      "texto": "Agregação condicional — SUM(CASE WHEN …) para relatórios em colunas"
+     },
+     {
+      "id": "grouping-sets",
+      "texto": "GROUPING SETS, ROLLUP e CUBE — subtotais e total geral numa consulta"
+     },
+     {
+      "id": "grouping-func",
+      "texto": "GROUPING e GROUPING_ID — identificar as linhas de subtotal"
+     },
+     {
+      "id": "approx",
+      "texto": "APPROX_COUNT_DISTINCT e APPROX_PERCENTILE — agregações aproximadas para grandes volumes"
+     },
+     {
+      "id": "stats-agg",
+      "texto": "STDEV, VAR e agregações estatísticas"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "nivel": 2,
+  "secao": "intermediario",
+  "label": "Trilha 2",
+  "titulo": "SQL Intermediário",
+  "descricao": "Consultas complexas, programação T-SQL e concorrência",
+  "categorias": [
+   {
+    "id": "joins",
+    "num": "10",
+    "titulo": "JOINs",
+    "itens": [
+     {
+      "id": "inner",
+      "texto": "INNER JOIN — o clássico"
+     },
+     {
+      "id": "left-right",
+      "texto": "LEFT e RIGHT JOIN — quando toda linha de um lado importa"
+     },
+     {
+      "id": "join-on-where",
+      "texto": "ON vs WHERE no LEFT JOIN — o filtro que transforma LEFT em INNER sem você perceber"
+     },
+     {
+      "id": "full",
+      "texto": "FULL OUTER JOIN — todos os registros dos dois lados"
+     },
+     {
+      "id": "self-cross",
+      "texto": "SELF JOIN e CROSS JOIN — casos reais de uso"
+     },
+     {
+      "id": "non-equi",
+      "texto": "Non-equi join — JOIN por faixa (datas, preços, vigências)"
+     },
+     {
+      "id": "join-duplicacao",
+      "texto": "Linhas duplicadas no JOIN — cardinalidade e o SUM que dobrou sozinho"
+     }
+    ]
+   },
+   {
+    "id": "subqueries",
+    "num": "11",
+    "titulo": "Subqueries, APPLY e Operadores de Conjunto",
+    "itens": [
+     {
+      "id": "subquery",
+      "texto": "Subqueries — correlacionada vs não correlacionada"
+     },
+     {
+      "id": "derived",
+      "texto": "Tabelas derivadas — subquery no FROM"
+     },
+     {
+      "id": "subquery-escalar",
+      "texto": "Subquery escalar no SELECT — e o custo por linha"
+     },
+     {
+      "id": "exists",
+      "texto": "EXISTS e NOT EXISTS — semi-join e anti-join"
+     },
+     {
+      "id": "in-any-all",
+      "texto": "IN, ANY, ALL — comparações com conjuntos"
+     },
+     {
+      "id": "anti-join",
+      "texto": "NOT IN vs NOT EXISTS vs LEFT JOIN … IS NULL — a armadilha do NULL"
+     },
+     {
+      "id": "apply",
+      "texto": "CROSS APPLY e OUTER APPLY — o JOIN com superpoderes"
+     },
+     {
+      "id": "union",
+      "texto": "UNION vs UNION ALL — o custo escondido do DISTINCT"
+     },
+     {
+      "id": "intersect-except",
+      "texto": "INTERSECT e EXCEPT — comparar conjuntos e achar diferenças entre tabelas"
+     },
+     {
+      "id": "values-ctor",
+      "texto": "Construtor VALUES — tabelas inline sem criar nada"
+     }
+    ]
+   },
+   {
+    "id": "cte-window",
+    "num": "12",
+    "titulo": "CTEs e Window Functions",
+    "itens": [
+     {
+      "id": "cte",
+      "texto": "CTE (WITH) — legibilidade, reuso e diferença para subquery"
+     },
+     {
+      "id": "cte-recursiva",
+      "texto": "CTE recursiva — hierarquias, árvores e MAXRECURSION"
+     },
+     {
+      "id": "window-intro",
+      "texto": "O que é uma window function — OVER() explicado do zero"
+     },
+     {
+      "id": "row-rank",
+      "texto": "ROW_NUMBER, RANK, DENSE_RANK e NTILE"
+     },
+     {
+      "id": "partition",
+      "texto": "PARTITION BY vs GROUP BY — quando cada um é a escolha certa"
+     },
+     {
+      "id": "agg-over",
+      "texto": "Agregações com OVER — SUM, COUNT e AVG por janela sem GROUP BY"
+     },
+     {
+      "id": "frames",
+      "texto": "Frames — ROWS vs RANGE e o default que deixa a query lenta"
+     },
+     {
+      "id": "running-total",
+      "texto": "Total acumulado e média móvel"
+     },
+     {
+      "id": "lag-lead",
+      "texto": "LAG e LEAD — comparar com a linha anterior e a próxima"
+     },
+     {
+      "id": "first-last",
+      "texto": "FIRST_VALUE e LAST_VALUE — e por que o LAST_VALUE “erra”"
+     },
+     {
+      "id": "percentis",
+      "texto": "PERCENT_RANK, CUME_DIST, PERCENTILE_CONT e PERCENTILE_DISC"
+     },
+     {
+      "id": "window-2022",
+      "texto": "Cláusula WINDOW e IGNORE NULLS (2022)"
+     },
+     {
+      "id": "gaps-islands",
+      "texto": "Gaps and Islands — achar sequências e buracos"
+     },
+     {
+      "id": "dedup",
+      "texto": "Remover duplicados com ROW_NUMBER — manter só o registro mais recente"
+     },
+     {
+      "id": "top-n-grupo",
+      "texto": "Top N por grupo — ROW_NUMBER vs CROSS APPLY"
+     }
+    ]
+   },
+   {
+    "id": "views",
+    "num": "13",
+    "titulo": "Views",
+    "itens": [
+     {
+      "id": "view-simples",
+      "texto": "View simples — criação, uso e limitações"
+     },
+     {
+      "id": "view-atualizavel",
+      "texto": "Views atualizáveis — quando dá para fazer INSERT/UPDATE através da view"
+     },
+     {
+      "id": "view-check",
+      "texto": "WITH CHECK OPTION — garantir que o dado alterado continue visível na view"
+     },
+     {
+      "id": "view-schemabinding",
+      "texto": "SCHEMABINDING — proteger a view contra mudanças nas tabelas"
+     },
+     {
+      "id": "view-mat",
+      "texto": "Indexed Views — a “view materializada” do SQL Server: requisitos, NOEXPAND e custo"
+     },
+     {
+      "id": "view-aninhada",
+      "texto": "Views aninhadas — o anti-padrão que destrói planos de execução"
+     },
+     {
+      "id": "view-particionada",
+      "texto": "Partitioned views — UNION ALL com CHECK constraints"
+     }
+    ]
+   },
+   {
+    "id": "tsql",
+    "num": "14",
+    "titulo": "Programação T-SQL",
+    "itens": [
+     {
+      "id": "variaveis",
+      "texto": "Variáveis — DECLARE, e SET vs SELECT na atribuição"
+     },
+     {
+      "id": "controle-fluxo",
+      "texto": "IF/ELSE, WHILE, BREAK, CONTINUE"
+     },
+     {
+      "id": "temp-tables",
+      "texto": "#temp vs ##global vs @table variable — diferenças reais e quando usar cada uma"
+     },
+     {
+      "id": "tvp",
+      "texto": "Table-Valued Parameters — mandar uma lista inteira da aplicação para a procedure"
+     },
+     {
+      "id": "try-catch",
+      "texto": "TRY/CATCH, THROW vs RAISERROR e as funções ERROR_*()"
+     },
+     {
+      "id": "xact-abort",
+      "texto": "SET XACT_ABORT ON — por que toda procedure com transação deveria ter"
+     },
+     {
+      "id": "dinamico",
+      "texto": "SQL dinâmico — EXEC vs sp_executesql, parâmetros e QUOTENAME"
+     },
+     {
+      "id": "sql-injection",
+      "texto": "SQL Injection — como acontece no T-SQL e como blindar"
+     },
+     {
+      "id": "cursores",
+      "texto": "Cursores — como funcionam, por que evitar e os raros casos em que são a resposta"
+     },
+     {
+      "id": "set-options",
+      "texto": "SET options — NOCOUNT, ANSI_NULLS, QUOTED_IDENTIFIER, ARITHABORT"
+     },
+     {
+      "id": "debug-tsql",
+      "texto": "Depurar T-SQL — PRINT, RAISERROR WITH NOWAIT e tabelas de log"
+     },
+     {
+      "id": "tally",
+      "texto": "Tabela de números (tally) e GENERATE_SERIES — trocar loops por conjuntos"
+     }
+    ]
+   },
+   {
+    "id": "procedures",
+    "num": "15",
+    "titulo": "Procedures, Funções e Triggers",
+    "itens": [
+     {
+      "id": "procedure",
+      "texto": "Stored Procedure — criar, executar e por que usar"
+     },
+     {
+      "id": "proc-params",
+      "texto": "Parâmetros — OUTPUT, valores padrão e RETURN codes"
+     },
+     {
+      "id": "proc-boas-praticas",
+      "texto": "Boas práticas — SET NOCOUNT ON, prefixo de schema, nunca usar o prefixo sp_"
+     },
+     {
+      "id": "func-escalar",
+      "texto": "Função escalar — limitações de performance e o UDF inlining (2019)"
+     },
+     {
+      "id": "func-tabela",
+      "texto": "Função de tabela (TVF) — inline vs multi-statement"
+     },
+     {
+      "id": "execute-as",
+      "texto": "EXECUTE AS e assinatura de módulos com certificado — permissão controlada"
+     },
+     {
+      "id": "trigger-after",
+      "texto": "Trigger AFTER INSERT/UPDATE/DELETE — auditoria e reações automáticas"
+     },
+     {
+      "id": "trigger-inserted-deleted",
+      "texto": "Tabelas inserted e deleted — trigger roda por comando, não por linha"
+     },
+     {
+      "id": "trigger-instead",
+      "texto": "Trigger INSTEAD OF — interceptar operações em views"
+     },
+     {
+      "id": "trigger-ddl",
+      "texto": "DDL triggers e logon triggers — auditar CREATE/ALTER/DROP e controlar logins"
+     },
+     {
+      "id": "trigger-cuidados",
+      "texto": "Cuidados com triggers — por que viram pesadelo de manutenção"
+     },
+     {
+      "id": "clr",
+      "texto": "CLR — .NET dentro do SQL Server: quando (raramente) vale a pena"
+     }
+    ]
+   },
+   {
+    "id": "transacoes",
+    "num": "16",
+    "titulo": "Transações e Concorrência",
+    "itens": [
+     {
+      "id": "acid",
+      "texto": "ACID — atomicidade, consistência, isolamento e durabilidade com exemplos reais"
+     },
+     {
+      "id": "modos-transacao",
+      "texto": "Autocommit, transação explícita e implícita (IMPLICIT_TRANSACTIONS)"
+     },
+     {
+      "id": "begin-commit",
+      "texto": "BEGIN, COMMIT e ROLLBACK — controle manual de transação"
+     },
+     {
+      "id": "savepoint",
+      "texto": "SAVE TRANSACTION — rollback parcial"
+     },
+     {
+      "id": "trancount",
+      "texto": "@@TRANCOUNT e transações aninhadas — o mito do COMMIT interno"
+     },
+     {
+      "id": "locks",
+      "texto": "Locks — o que são, por que existem e como o banco protege um dado sendo alterado"
+     },
+     {
+      "id": "blocking",
+      "texto": "Bloqueio — o que é, como enxergar e como resolver"
+     },
+     {
+      "id": "isolamento",
+      "texto": "Níveis de isolamento — de Read Uncommitted a Serializable, com dirty read, non-repeatable read e phantom"
+     },
+     {
+      "id": "snapshot-rcsi",
+      "texto": "SNAPSHOT e RCSI — versionamento de linhas: leitor não bloqueia escritor"
+     },
+     {
+      "id": "nolock",
+      "texto": "NOLOCK — não é “leitura rápida”: pode trazer linha duplicada ou faltando"
+     },
+     {
+      "id": "deadlock",
+      "texto": "Deadlock — o que é, como detectar e como evitar"
+     },
+     {
+      "id": "deadlock-grafo",
+      "texto": "Ler um deadlock graph — capturar no system_health e interpretar"
+     },
+     {
+      "id": "concorrencia-otimista",
+      "texto": "Concorrência otimista com ROWVERSION — evitar o “último que salvar ganha”"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "nivel": 3,
+  "secao": "performance",
+  "label": "Trilha 3",
+  "titulo": "Performance",
+  "descricao": "Como o motor funciona por dentro e como deixá-lo rápido",
+  "categorias": [
+   {
+    "id": "internals",
+    "num": "17",
+    "titulo": "Arquitetura Interna do SQL Server",
+    "itens": [
+     {
+      "id": "arq-geral",
+      "texto": "Como o SQL Server funciona por dentro — Relational Engine, Storage Engine e SQLOS"
+     },
+     {
+      "id": "query-lifecycle",
+      "texto": "A vida de uma query — parse, bind, otimização, cache de plano e execução"
+     },
+     {
+      "id": "pages",
+      "texto": "Páginas de 8 KB e extents — a unidade fundamental de tudo"
+     },
+     {
+      "id": "row-structure",
+      "texto": "Estrutura de uma linha — cabeçalho, NULL bitmap, colunas fixas e variáveis"
+     },
+     {
+      "id": "lob-overflow",
+      "texto": "Row overflow e LOB — para onde vai o VARCHAR(MAX)"
+     },
+     {
+      "id": "alloc-pages",
+      "texto": "Páginas de alocação — GAM, SGAM, PFS e IAM"
+     },
+     {
+      "id": "heap-btree",
+      "texto": "Heap vs B-tree — estrutura física e forwarded records"
+     },
+     {
+      "id": "page-split",
+      "texto": "Page split e FILLFACTOR — por que inserir no meio dói"
+     },
+     {
+      "id": "buffer-pool",
+      "texto": "Buffer pool — leitura lógica vs física e por que o SQL Server “come” toda a memória"
+     },
+     {
+      "id": "checkpoint",
+      "texto": "Checkpoint, lazy writer e dirty pages"
+     },
+     {
+      "id": "tlog-internals",
+      "texto": "Transaction log por dentro — write-ahead logging, LSN e VLFs"
+     },
+     {
+      "id": "recovery-fases",
+      "texto": "Crash recovery — Analysis, Redo e Undo, e o Accelerated Database Recovery (ADR)"
+     },
+     {
+      "id": "schedulers",
+      "texto": "SQLOS — schedulers, workers e os estados RUNNING, RUNNABLE e SUSPENDED"
+     },
+     {
+      "id": "memory-grants",
+      "texto": "Memória de execução — memory grants e spills para o tempdb"
+     }
+    ]
+   },
+   {
+    "id": "locks-fundo",
+    "num": "18",
+    "titulo": "Locks a fundo — tipos, recursos e hints",
+    "itens": [
+     {
+      "id": "lock-modos-basicos",
+      "texto": "Modos básicos — Shared (S), Update (U) e Exclusive (X): quem pega o quê em SELECT, UPDATE e DELETE"
+     },
+     {
+      "id": "lock-u",
+      "texto": "Por que o lock U existe — o deadlock de conversão que ele evita"
+     },
+     {
+      "id": "lock-intent",
+      "texto": "Intent locks — IS, IX, IU, SIX, SIU e UIX: sinalizando para o nível de cima"
+     },
+     {
+      "id": "lock-schema",
+      "texto": "Schema locks — Sch-S e Sch-M: por que um ALTER TABLE trava até o SELECT"
+     },
+     {
+      "id": "lock-bu",
+      "texto": "Bulk Update (BU) — o lock do BULK INSERT com TABLOCK"
+     },
+     {
+      "id": "lock-range",
+      "texto": "Key-range locks — RangeS-S, RangeS-U, RangeI-N, RangeX-X: como o SERIALIZABLE impede phantoms"
+     },
+     {
+      "id": "lock-compat",
+      "texto": "Matriz de compatibilidade — quem bloqueia quem"
+     },
+     {
+      "id": "lock-recursos",
+      "texto": "Recursos bloqueáveis — RID, KEY, PAGE, EXTENT, HoBT, OBJECT, FILE, METADATA, ALLOCATION_UNIT, DATABASE e APPLICATION"
+     },
+     {
+      "id": "lock-hierarquia",
+      "texto": "Hierarquia de locks — linha, página, tabela e banco numa mesma query"
+     },
+     {
+      "id": "lock-duracao",
+      "texto": "Duração do lock por nível de isolamento — quando o S é liberado e por que o X vai até o COMMIT"
+     },
+     {
+      "id": "lock-escalation",
+      "texto": "Lock escalation — o limite de ~5.000 locks, LOCK_ESCALATION (TABLE, AUTO, DISABLE) e como evitar"
+     },
+     {
+      "id": "lock-allow-opcoes",
+      "texto": "ALLOW_ROW_LOCKS e ALLOW_PAGE_LOCKS no índice — o que muda quando você desliga"
+     },
+     {
+      "id": "lock-hints",
+      "texto": "Lock hints — NOLOCK, READPAST, UPDLOCK, XLOCK, HOLDLOCK, ROWLOCK, PAGLOCK, TABLOCK, TABLOCKX e NOWAIT"
+     },
+     {
+      "id": "lock-fila",
+      "texto": "Fila de trabalho com UPDLOCK + READPAST — vários processos consumindo a mesma tabela sem conflito"
+     },
+     {
+      "id": "lock-dm-tran-locks",
+      "texto": "Ler o sys.dm_tran_locks — resource_type, request_mode e request_status (GRANT, WAIT, CONVERT)"
+     },
+     {
+      "id": "lock-waits",
+      "texto": "Waits de lock — LCK_M_S, LCK_M_U, LCK_M_X, LCK_M_IX, LCK_M_SCH_M e o que cada um revela"
+     },
+     {
+      "id": "lock-blocked-report",
+      "texto": "Blocked process report — capturar bloqueios longos automaticamente"
+     },
+     {
+      "id": "deadlock-tipos",
+      "texto": "Tipos de deadlock — ciclo, conversão, key lookup deadlock e intra-query (paralelismo)"
+     },
+     {
+      "id": "lock-low-priority",
+      "texto": "WAIT_AT_LOW_PRIORITY — rebuild online e partition switch sem derrubar a aplicação"
+     },
+     {
+      "id": "lock-memoria",
+      "texto": "Memória de locks e lock partitioning — o custo de milhões de locks"
+     },
+     {
+      "id": "optimized-locking",
+      "texto": "Optimized Locking (2025) — TID locking e lock after qualification"
+     },
+     {
+      "id": "latches",
+      "texto": "Locks vs latches vs spinlocks — a concorrência interna do engine (PAGELATCH vs PAGEIOLATCH)"
+     }
+    ]
+   },
+   {
+    "id": "indices",
+    "num": "19",
+    "titulo": "Índices",
+    "itens": [
+     {
+      "id": "idx-intro",
+      "texto": "O que é um índice — como o banco procura sem índice (Table Scan)"
+     },
+     {
+      "id": "btree",
+      "texto": "Estrutura B-tree — root, níveis intermediários e leaf level"
+     },
+     {
+      "id": "clustered",
+      "texto": "Clustered index vs heap — como os dados são armazenados fisicamente"
+     },
+     {
+      "id": "clustered-escolha",
+      "texto": "Escolhendo a chave clustered — estreita, única, estática e crescente"
+     },
+     {
+      "id": "nonclustered",
+      "texto": "Nonclustered index — estrutura, Key Lookup e RID Lookup"
+     },
+     {
+      "id": "seek-scan",
+      "texto": "Seek vs Scan — nem todo scan é ruim, nem todo seek é bom"
+     },
+     {
+      "id": "idx-composto",
+      "texto": "Índice composto — a ordem das colunas importa (e muito)"
+     },
+     {
+      "id": "covering",
+      "texto": "Covering index — eliminar o Key Lookup com INCLUDE"
+     },
+     {
+      "id": "idx-unico",
+      "texto": "Índice único vs constraint UNIQUE — quando usar cada um"
+     },
+     {
+      "id": "idx-filtrado",
+      "texto": "Índice filtrado — indexar só o subconjunto que importa"
+     },
+     {
+      "id": "idx-computed",
+      "texto": "Índice em coluna calculada"
+     },
+     {
+      "id": "columnstore",
+      "texto": "Columnstore index — armazenamento colunar para analítico e DW"
+     },
+     {
+      "id": "columnstore-internals",
+      "texto": "Columnstore por dentro — rowgroups, segmentos, delta store e segment elimination"
+     },
+     {
+      "id": "batch-mode",
+      "texto": "Batch mode — processar milhares de linhas por vez (columnstore e rowstore)"
+     },
+     {
+      "id": "idx-especiais",
+      "texto": "Índices especiais — XML, espacial, full-text e vetorial"
+     },
+     {
+      "id": "idx-quando-nao",
+      "texto": "Quando NÃO criar índice — o custo em INSERT/UPDATE/DELETE"
+     },
+     {
+      "id": "idx-usage",
+      "texto": "Índices não usados e duplicados — sys.dm_db_index_usage_stats"
+     },
+     {
+      "id": "idx-estrategia",
+      "texto": "Estratégia de indexação — como decidir o que indexar numa tabela real"
+     },
+     {
+      "id": "fragmentacao",
+      "texto": "Fragmentação — REBUILD vs REORGANIZE, e por que o mundo exagera nessa preocupação"
+     },
+     {
+      "id": "idx-online",
+      "texto": "ONLINE, RESUMABLE e OPTIMIZE_FOR_SEQUENTIAL_KEY — índices em produção"
+     },
+     {
+      "id": "compressao",
+      "texto": "Compressão ROW e PAGE — menos I/O em troca de CPU"
+     }
+    ]
+   },
+   {
+    "id": "estatisticas",
+    "num": "20",
+    "titulo": "Estatísticas e Estimativa de Cardinalidade",
+    "itens": [
+     {
+      "id": "estatisticas",
+      "texto": "O que são estatísticas — histograma e densidade (DBCC SHOW_STATISTICS)"
+     },
+     {
+      "id": "stats-auto",
+      "texto": "Auto create e auto update — quando disparam de verdade"
+     },
+     {
+      "id": "stats-update",
+      "texto": "UPDATE STATISTICS — FULLSCAN vs sample e quando atualizar na mão"
+     },
+     {
+      "id": "stats-filtradas",
+      "texto": "Estatísticas filtradas e multicoluna"
+     },
+     {
+      "id": "ascending-key",
+      "texto": "O problema da chave crescente — datas novas que “não existem” para o otimizador"
+     },
+     {
+      "id": "ce-versoes",
+      "texto": "Cardinality Estimator — legado vs novo, compatibility level e hints"
+     },
+     {
+      "id": "estimado-real",
+      "texto": "Estimado vs real — quando a estimativa erra e o plano desaba"
+     }
+    ]
+   },
+   {
+    "id": "plano",
+    "num": "21",
+    "titulo": "Planos de Execução",
+    "itens": [
+     {
+      "id": "plano-intro",
+      "texto": "O que é um plano de execução — como o otimizador escolhe o caminho"
+     },
+     {
+      "id": "plano-tipos",
+      "texto": "Plano estimado vs real vs Live Query Statistics"
+     },
+     {
+      "id": "ler-plano",
+      "texto": "Como ler um plano — da direita para a esquerda, setas, custos e propriedades"
+     },
+     {
+      "id": "dmv-sqlserver",
+      "texto": "SET STATISTICS IO e TIME — medir leituras e tempo de verdade"
+     },
+     {
+      "id": "operadores",
+      "texto": "Operadores de acesso — Table Scan, Index Scan, Index Seek, Key Lookup, RID Lookup"
+     },
+     {
+      "id": "joins-fisicos",
+      "texto": "Operadores de junção — Nested Loops, Merge Join e Hash Match: quando cada um aparece"
+     },
+     {
+      "id": "operadores-outros",
+      "texto": "Sort, Stream/Hash Aggregate, Spool, Compute Scalar e Filter"
+     },
+     {
+      "id": "warnings",
+      "texto": "Warnings no plano — conversão implícita, spill, missing index, no join predicate"
+     },
+     {
+      "id": "paralelismo",
+      "texto": "Paralelismo no plano — Gather/Repartition Streams, MAXDOP e CXPACKET/CXCONSUMER"
+     },
+     {
+      "id": "plan-cache",
+      "texto": "Plan cache — reuso, excesso de planos ad hoc e como consultar o cache"
+     },
+     {
+      "id": "query-store",
+      "texto": "Query Store — histórico de planos, regressões e forçar plano"
+     },
+     {
+      "id": "plan-tools",
+      "texto": "Ferramentas — Plan Explorer, Paste The Plan e comparação de planos no SSMS"
+     },
+     {
+      "id": "antes-depois",
+      "texto": "Antes e depois do índice — os dois planos lado a lado"
+     }
+    ]
+   },
+   {
+    "id": "waits",
+    "num": "22",
+    "titulo": "Wait Types a fundo — o que o banco está esperando",
+    "itens": [
+     {
+      "id": "waits-intro",
+      "texto": "Como funciona uma espera — RUNNING, SUSPENDED e RUNNABLE; resource wait vs signal wait"
+     },
+     {
+      "id": "waits-dmvs",
+      "texto": "dm_os_wait_stats vs dm_os_waiting_tasks vs dm_exec_session_wait_stats — acumulado, agora e por sessão"
+     },
+     {
+      "id": "waits-benignos",
+      "texto": "Waits benignos — os que você deve filtrar (SLEEP_TASK, LAZYWRITER_SLEEP, BROKER_*, XE_*, CHECKPOINT_QUEUE, WAITFOR…)"
+     },
+     {
+      "id": "wait-stats",
+      "texto": "Tuning por esperas — dos top waits da instância até a query culpada"
+     },
+     {
+      "id": "waits-plano-qs",
+      "texto": "Waits no plano real e no Query Store — espera por query, não só por instância"
+     },
+     {
+      "id": "wait-cpu",
+      "texto": "SOS_SCHEDULER_YIELD e signal waits altos — pressão de CPU"
+     },
+     {
+      "id": "wait-threadpool",
+      "texto": "THREADPOOL — acabaram os worker threads e a instância “trava” para novas conexões"
+     },
+     {
+      "id": "wait-cx",
+      "texto": "CXPACKET, CXCONSUMER, CXSYNC_PORT e CXSYNC_CONSUMER — paralelismo: quando é sintoma e quando é normal"
+     },
+     {
+      "id": "wait-pageiolatch",
+      "texto": "PAGEIOLATCH_SH, _EX e _UP — esperando a página vir do disco: I/O lento ou pouca memória?"
+     },
+     {
+      "id": "wait-pagelatch",
+      "texto": "PAGELATCH_SH, _EX e _UP — contenção em memória: last page insert e OPTIMIZE_FOR_SEQUENTIAL_KEY"
+     },
+     {
+      "id": "wait-pagelatch-tempdb",
+      "texto": "PAGELATCH em 2:1:1, 2:1:2 e 2:1:3 — contenção de alocação no TempDB (PFS, GAM, SGAM)"
+     },
+     {
+      "id": "wait-latch",
+      "texto": "LATCH_EX e LATCH_SH — latches que não são de página (sys.dm_os_latch_stats)"
+     },
+     {
+      "id": "wait-writelog",
+      "texto": "WRITELOG e LOGBUFFER — o log é o gargalo: disco lento ou commit linha a linha"
+     },
+     {
+      "id": "wait-io-outros",
+      "texto": "IO_COMPLETION, ASYNC_IO_COMPLETION e WRITE_COMPLETION"
+     },
+     {
+      "id": "wait-backup",
+      "texto": "BACKUPIO, BACKUPBUFFER e BACKUPTHREAD — backup e restore lentos"
+     },
+     {
+      "id": "wait-bpool-flush",
+      "texto": "SLEEP_BPOOL_FLUSH — checkpoint sendo estrangulado"
+     },
+     {
+      "id": "wait-resource-semaphore",
+      "texto": "RESOURCE_SEMAPHORE — fila de memory grant: queries esperando memória para rodar"
+     },
+     {
+      "id": "wait-compile",
+      "texto": "RESOURCE_SEMAPHORE_QUERY_COMPILE — fila de compilação (excesso de SQL ad hoc)"
+     },
+     {
+      "id": "wait-cmemthread",
+      "texto": "CMEMTHREAD — contenção em objetos de memória compartilhados"
+     },
+     {
+      "id": "wait-stats-sync",
+      "texto": "WAIT_ON_SYNC_STATISTICS_REFRESH (2019+) — query parada esperando a estatística atualizar"
+     },
+     {
+      "id": "wait-network",
+      "texto": "ASYNC_NETWORK_IO — o problema está na aplicação, não no banco"
+     },
+     {
+      "id": "wait-preemptive",
+      "texto": "PREEMPTIVE_OS_* — chamadas ao Windows: autogrowth sem IFI, autenticação no AD, arquivos"
+     },
+     {
+      "id": "wait-oledb",
+      "texto": "OLEDB e MSQL_XP — linked servers, consultas remotas e extended procedures"
+     },
+     {
+      "id": "wait-dtc",
+      "texto": "DTC e DTC_STATE — transações distribuídas"
+     },
+     {
+      "id": "wait-hadr",
+      "texto": "HADR_SYNC_COMMIT — o custo do commit síncrono no Availability Group (e os HADR_* benignos)"
+     },
+     {
+      "id": "wait-redo",
+      "texto": "PARALLEL_REDO_* e DBMIRROR_* — redo no secundário e o mirroring legado"
+     },
+     {
+      "id": "wait-repl",
+      "texto": "REPL_SCHEMA_ACCESS e REPL_CACHE_ACCESS — Log Reader e replicação transacional em contenção"
+     },
+     {
+      "id": "wait-replica-writes",
+      "texto": "REPLICA_WRITES — escrita em database snapshots e nos snapshots internos do DBCC"
+     },
+     {
+      "id": "wait-trace",
+      "texto": "TRACEWRITE e SQLTRACE_* — o custo de traces e do Profiler rodando"
+     },
+     {
+      "id": "wait-log-rate",
+      "texto": "LOG_RATE_GOVERNOR e waits de nuvem — os limites de log no Azure SQL"
+     },
+     {
+      "id": "wait-referencia",
+      "texto": "Onde pesquisar qualquer wait — documentação oficial e a biblioteca de waits do SQLskills"
+     }
+    ]
+   },
+   {
+    "id": "performance",
+    "num": "23",
+    "titulo": "Performance e Tuning",
+    "itens": [
+     {
+      "id": "metodologia",
+      "texto": "Metodologia de tuning — medir, achar o gargalo, mudar uma coisa, medir de novo"
+     },
+     {
+      "id": "slow-queries",
+      "texto": "Encontrar as queries mais caras — DMVs de plan cache e Query Store"
+     },
+     {
+      "id": "sargavel",
+      "texto": "SARGabilidade — função na coluna, conversão e o WHERE que mata o índice"
+     },
+     {
+      "id": "missing-index",
+      "texto": "Missing index suggestions — como o banco sugere índices e quando NÃO seguir"
+     },
+     {
+      "id": "param-sniffing",
+      "texto": "Parameter sniffing — o problema invisível que derruba a performance em produção"
+     },
+     {
+      "id": "psp",
+      "texto": "Soluções para sniffing — RECOMPILE, OPTIMIZE FOR, PSP optimization (2022)"
+     },
+     {
+      "id": "catch-all",
+      "texto": "Queries “pega-tudo” (@p IS NULL OR coluna = @p) e como resolver"
+     },
+     {
+      "id": "recompile",
+      "texto": "Recompilação — quando o plano em cache atrapalha e quando recompilar custa caro"
+     },
+     {
+      "id": "hints",
+      "texto": "Query hints e table hints — ferramenta ou gambiarra?"
+     },
+     {
+      "id": "qs-hints",
+      "texto": "Query Store hints e plan guides — mudar o plano sem mexer no código"
+     },
+     {
+      "id": "iqp",
+      "texto": "Intelligent Query Processing — adaptive joins, memory grant feedback, DOP feedback"
+     },
+     {
+      "id": "rbar",
+      "texto": "RBAR — cursores, loops e funções escalares: o custo do linha a linha"
+     },
+     {
+      "id": "tempdb",
+      "texto": "TempDB — contenção, múltiplos arquivos e metadata otimizada para memória"
+     },
+     {
+      "id": "gargalos",
+      "texto": "Pressão de memória, CPU alta e I/O lento — como diagnosticar cada um"
+     },
+     {
+      "id": "ssms-resource-gov",
+      "texto": "Resource Governor — limitar CPU, memória e I/O por workload"
+     },
+     {
+      "id": "in-memory",
+      "texto": "In-Memory OLTP — tabelas otimizadas para memória e procedures nativas: quando compensa"
+     },
+     {
+      "id": "carga-teste",
+      "texto": "Testes de carga — ostress, HammerDB e como comparar antes/depois de forma justa"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "nivel": 4,
+  "secao": "avancado",
+  "label": "Trilha 4",
+  "titulo": "Recursos Avançados",
+  "descricao": "Estruturas especiais, JSON/XML e modelagem para DW",
+  "categorias": [
+   {
+    "id": "avancado",
+    "num": "24",
+    "titulo": "Estruturas Avançadas",
+    "itens": [
+     {
+      "id": "sequence",
+      "texto": "IDENTITY vs SEQUENCE — gaps, cache, IDENTITY_CACHE e reseed"
+     },
+     {
+      "id": "pivot-unpivot",
+      "texto": "PIVOT e UNPIVOT — e o PIVOT dinâmico"
+     },
+     {
+      "id": "particionamento",
+      "texto": "Particionamento — partition function, partition scheme e índices alinhados"
+     },
+     {
+      "id": "part-switch",
+      "texto": "Partition switching e sliding window — arquivar milhões de linhas em milissegundos"
+     },
+     {
+      "id": "part-elimination",
+      "texto": "Partition elimination — quando o particionamento acelera (e quando não)"
+     },
+     {
+      "id": "temporal",
+      "texto": "Temporal tables — histórico automático e FOR SYSTEM_TIME AS OF"
+     },
+     {
+      "id": "ledger",
+      "texto": "Ledger tables (2022) — tabelas à prova de adulteração"
+     },
+     {
+      "id": "graph",
+      "texto": "Graph tables — NODE, EDGE e MATCH"
+     },
+     {
+      "id": "hierarchyid",
+      "texto": "HIERARCHYID — hierarquias nativas"
+     },
+     {
+      "id": "spatial",
+      "texto": "Dados espaciais — GEOGRAPHY, GEOMETRY e cálculo de distância"
+     },
+     {
+      "id": "filestream",
+      "texto": "FILESTREAM e FileTable — arquivos gerenciados pelo banco"
+     },
+     {
+      "id": "ssms-service-broker",
+      "texto": "Service Broker — filas e mensageria assíncrona dentro do banco"
+     }
+    ]
+   },
+   {
+    "id": "json-xml",
+    "num": "25",
+    "titulo": "JSON, XML e Busca Textual",
+    "itens": [
+     {
+      "id": "json-intro",
+      "texto": "JSON no SQL Server — de NVARCHAR ao tipo JSON nativo (2025)"
+     },
+     {
+      "id": "for-json",
+      "texto": "FOR JSON PATH e AUTO — gerar JSON a partir de tabelas"
+     },
+     {
+      "id": "json-query",
+      "texto": "JSON_VALUE, JSON_QUERY, ISJSON e OPENJSON — ler e explodir JSON"
+     },
+     {
+      "id": "json-modify",
+      "texto": "JSON_MODIFY — alterar JSON sem reescrever o campo inteiro"
+     },
+     {
+      "id": "json-construtores",
+      "texto": "JSON_OBJECT e JSON_ARRAY (2022), JSON_OBJECTAGG e JSON_ARRAYAGG (2025)"
+     },
+     {
+      "id": "json-index",
+      "texto": "Indexar JSON — coluna calculada + índice, e o índice JSON do 2025"
+     },
+     {
+      "id": "xml-intro",
+      "texto": "Tipo XML — typed vs untyped e XML Schema Collections"
+     },
+     {
+      "id": "xmltable",
+      "texto": "Métodos XML — .value(), .query(), .nodes(), .exist() e .modify()"
+     },
+     {
+      "id": "for-xml",
+      "texto": "FOR XML RAW, AUTO, PATH e EXPLICIT — e o truque clássico de concatenar strings"
+     },
+     {
+      "id": "openxml",
+      "texto": "OPENXML — o jeito antigo (e ainda encontrado) de ler XML"
+     },
+     {
+      "id": "xml-index",
+      "texto": "Índices XML — primário e secundários"
+     },
+     {
+      "id": "fulltext",
+      "texto": "Full-Text Search — CONTAINS, FREETEXT e índice full-text vs LIKE"
+     },
+     {
+      "id": "fulltext-avancado",
+      "texto": "Full-Text avançado — CONTAINSTABLE, ranking, stoplists e thesaurus em português"
+     }
+    ]
+   },
+   {
+    "id": "dw",
+    "num": "26",
+    "titulo": "Modelagem para Data Warehouse",
+    "itens": [
+     {
+      "id": "olap-oltp",
+      "texto": "OLTP vs OLAP — modelagem, índices e workloads completamente diferentes"
+     },
+     {
+      "id": "kimball-inmon",
+      "texto": "Kimball vs Inmon — as duas escolas de DW"
+     },
+     {
+      "id": "grao",
+      "texto": "O grão da tabela fato — a decisão mais importante do modelo dimensional"
+     },
+     {
+      "id": "star",
+      "texto": "Star Schema — fato + dimensões desnormalizadas"
+     },
+     {
+      "id": "snowflake",
+      "texto": "Snowflake Schema — normalizar dimensões e o custo disso"
+     },
+     {
+      "id": "galaxy",
+      "texto": "Galaxy Schema (Fact Constellation) — várias fatos compartilhando dimensões"
+     },
+     {
+      "id": "tipos-fato",
+      "texto": "Tipos de fato — transacional, snapshot periódico, snapshot acumulado e factless"
+     },
+     {
+      "id": "medidas",
+      "texto": "Medidas aditivas, semiaditivas e não aditivas"
+     },
+     {
+      "id": "tipos-dim",
+      "texto": "Tipos de dimensão — conformada, degenerada, junk, role-playing e outrigger"
+     },
+     {
+      "id": "dim-data",
+      "texto": "Dimensão Data (calendário) — gerar com feriados brasileiros e ano fiscal"
+     },
+     {
+      "id": "surrogate",
+      "texto": "Surrogate key vs natural key no DW — por que a dimensão usa chave artificial"
+     },
+     {
+      "id": "scd",
+      "texto": "Slowly Changing Dimensions — tipos 0, 1, 2, 3, 4 e 6"
+     },
+     {
+      "id": "scd2-pratica",
+      "texto": "SCD Tipo 2 na prática — com MERGE e com UPDATE + INSERT"
+     },
+     {
+      "id": "bridge",
+      "texto": "Tabelas ponte (bridge) — relacionamento N:N no modelo dimensional"
+     },
+     {
+      "id": "late-arriving",
+      "texto": "Late-arriving facts e dimensions — o dado que chega atrasado"
+     },
+     {
+      "id": "data-vault",
+      "texto": "Data Vault 2.0 — hubs, links e satellites"
+     },
+     {
+      "id": "medallion",
+      "texto": "Arquitetura Medallion — bronze, silver e gold"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "nivel": 5,
+  "secao": "administracao",
+  "label": "Trilha 5",
+  "titulo": "Administração (DBA)",
+  "descricao": "Instalar, proteger, fazer backup, manter e monitorar",
+  "categorias": [
+   {
+    "id": "instancia",
+    "num": "27",
+    "titulo": "Instalação e Configuração da Instância",
+    "itens": [
+     {
+      "id": "versao-edicoes",
+      "texto": "Versões e edições — @@VERSION, SERVERPROPERTY e os limites de cada edição"
+     },
+     {
+      "id": "ciclo-vida",
+      "texto": "Ciclo de vida — mainstream vs extended support e quando migrar"
+     },
+     {
+      "id": "instalacao-producao",
+      "texto": "Instalação para produção — features, collation da instância, diretórios e discos"
+     },
+     {
+      "id": "service-accounts",
+      "texto": "Contas de serviço e menor privilégio — Engine, Agent e Browser"
+     },
+     {
+      "id": "config-manager",
+      "texto": "SQL Server Configuration Manager — serviços, protocolos, portas e aliases"
+     },
+     {
+      "id": "browser-portas",
+      "texto": "SQL Server Browser, porta dinâmica vs fixa e firewall"
+     },
+     {
+      "id": "sp-configure",
+      "texto": "sp_configure — as configurações de instância que realmente importam"
+     },
+     {
+      "id": "max-memory",
+      "texto": "Max server memory — quanto deixar para o sistema operacional"
+     },
+     {
+      "id": "maxdop",
+      "texto": "MAXDOP e Cost Threshold for Parallelism — configurando o paralelismo"
+     },
+     {
+      "id": "ifi-lpim",
+      "texto": "Instant File Initialization e Lock Pages in Memory"
+     },
+     {
+      "id": "tempdb-config",
+      "texto": "Configurar o TempDB — número de arquivos, tamanhos e crescimento iguais"
+     },
+     {
+      "id": "trace-flags",
+      "texto": "Trace flags — o que são, como habilitar e quais ainda importam"
+     },
+     {
+      "id": "patching",
+      "texto": "Atualizações — CU e GDR: como aplicar e testar sem medo"
+     },
+     {
+      "id": "upgrade",
+      "texto": "Upgrade de versão — in-place vs side-by-side e compatibility level"
+     },
+     {
+      "id": "ssms-system-dbs",
+      "texto": "Bancos de sistema — master, model, msdb, tempdb e o Resource"
+     },
+     {
+      "id": "startup-params",
+      "texto": "Parâmetros de inicialização e single-user (-m, -f) — recuperar acesso à instância"
+     },
+     {
+      "id": "dac",
+      "texto": "DAC — Dedicated Admin Connection: a porta dos fundos quando tudo trava"
+     }
+    ]
+   },
+   {
+    "id": "armazenamento",
+    "num": "28",
+    "titulo": "Bancos, Arquivos e Armazenamento",
+    "itens": [
+     {
+      "id": "criar-banco",
+      "texto": "Criar banco para produção — tamanho inicial, arquivos, filegroups e owner"
+     },
+     {
+      "id": "files-filegroups",
+      "texto": "Arquivos e filegroups — MDF, NDF, LDF e como organizar dados e índices"
+     },
+     {
+      "id": "autogrowth",
+      "texto": "Auto-growth — por que o crescimento padrão é um perigo"
+     },
+     {
+      "id": "vlf",
+      "texto": "VLFs — o que são, por que fragmentam o log e como diagnosticar (sys.dm_db_log_info)"
+     },
+     {
+      "id": "log-full",
+      "texto": "Log cheio (erro 9002) — o log que não para de crescer"
+     },
+     {
+      "id": "log-reuse-wait",
+      "texto": "log_reuse_wait_desc valor a valor — LOG_BACKUP, ACTIVE_TRANSACTION, REPLICATION, AVAILABILITY_REPLICA, ACTIVE_BACKUP_OR_RESTORE, CHECKPOINT, OLDEST_PAGE e XTP_CHECKPOINT"
+     },
+     {
+      "id": "database-options",
+      "texto": "Database options — AUTO_CLOSE, AUTO_SHRINK, PAGE_VERIFY CHECKSUM e afins"
+     },
+     {
+      "id": "compat-level",
+      "texto": "Compatibility level — o que muda no comportamento do banco"
+     },
+     {
+      "id": "db-states",
+      "texto": "Estados do banco — ONLINE, RESTORING, RECOVERING, SUSPECT, EMERGENCY, OFFLINE"
+     },
+     {
+      "id": "snapshots",
+      "texto": "Database snapshots — leitura consistente e rollback rápido antes de um deploy"
+     },
+     {
+      "id": "attach-detach",
+      "texto": "Attach e detach — mover bancos entre instâncias"
+     },
+     {
+      "id": "mover-arquivos",
+      "texto": "Mover data e log para outro disco — ALTER DATABASE … MODIFY FILE"
+     },
+     {
+      "id": "shrink",
+      "texto": "SHRINK — por que quase sempre é má ideia e como fazer quando é inevitável"
+     },
+     {
+      "id": "espaco",
+      "texto": "Monitorar espaço — data, log e TempDB antes que o disco acabe"
+     },
+     {
+      "id": "storage-io",
+      "texto": "Storage para SQL Server — latência, SSD/NVMe, RAID e allocation unit de 64 KB"
+     },
+     {
+      "id": "contained-db",
+      "texto": "Contained databases — usuários sem login na instância: vantagens e armadilhas"
+     }
+    ]
+   },
+   {
+    "id": "seguranca",
+    "num": "29",
+    "titulo": "Segurança — Acesso e Permissões",
+    "itens": [
+     {
+      "id": "auth-modos",
+      "texto": "Modos de autenticação — Windows vs Mixed Mode, e Microsoft Entra ID"
+     },
+     {
+      "id": "usuarios",
+      "texto": "Logins vs usuários — login na instância, usuário no banco"
+     },
+     {
+      "id": "server-roles",
+      "texto": "Roles de servidor — sysadmin e cia., e por que quase ninguém deveria ser sysadmin"
+     },
+     {
+      "id": "roles",
+      "texto": "Roles de banco — fixas e customizadas"
+     },
+     {
+      "id": "permissoes-hierarquia",
+      "texto": "GRANT, DENY e REVOKE — hierarquia de permissões e o DENY que vence tudo"
+     },
+     {
+      "id": "schema-seguranca",
+      "texto": "Schemas como fronteira de segurança"
+     },
+     {
+      "id": "ownership-chaining",
+      "texto": "Ownership chaining — por que o usuário executa a procedure sem acesso à tabela"
+     },
+     {
+      "id": "orfaos",
+      "texto": "Usuários órfãos — por que aparecem depois de um restore e como corrigir"
+     },
+     {
+      "id": "hardening",
+      "texto": "Hardening — conta sa, xp_cmdshell, superfície de ataque e portas"
+     },
+     {
+      "id": "credentials",
+      "texto": "Credentials — identidades para acessar recursos externos"
+     },
+     {
+      "id": "auditoria",
+      "texto": "SQL Server Audit — server e database audit specifications"
+     },
+     {
+      "id": "classificacao",
+      "texto": "Data Discovery & Classification e Vulnerability Assessment"
+     },
+     {
+      "id": "lgpd",
+      "texto": "LGPD no banco de dados — mapear dados pessoais, mascarar, criptografar e auditar"
+     }
+    ]
+   },
+   {
+    "id": "criptografia",
+    "num": "30",
+    "titulo": "Criptografia e Proteção de Dados",
+    "itens": [
+     {
+      "id": "cert-keys",
+      "texto": "Hierarquia de criptografia — Service Master Key, Database Master Key, certificados e chaves"
+     },
+     {
+      "id": "tde",
+      "texto": "TDE — criptografar o banco inteiro em repouso"
+     },
+     {
+      "id": "backup-encryption",
+      "texto": "Backup criptografado — e o certificado que você precisa guardar"
+     },
+     {
+      "id": "tls",
+      "texto": "Criptografia em trânsito — TLS, Force Encryption e certificados"
+     },
+     {
+      "id": "col-encrypt",
+      "texto": "Criptografia por coluna — ENCRYPTBYKEY, chaves simétricas e ENCRYPTBYPASSPHRASE"
+     },
+     {
+      "id": "always-encrypted",
+      "texto": "Always Encrypted — criptografia de ponta a ponta, nem o DBA vê o dado"
+     },
+     {
+      "id": "ae-enclaves",
+      "texto": "Always Encrypted com secure enclaves — consultar dado criptografado"
+     },
+     {
+      "id": "masking",
+      "texto": "Dynamic Data Masking — ocultar dados sensíveis sem alterar o schema"
+     },
+     {
+      "id": "rls",
+      "texto": "Row-Level Security — cada usuário vê só o que pode ver"
+     },
+     {
+      "id": "hashbytes",
+      "texto": "HASHBYTES — hash e verificação de integridade"
+     }
+    ]
+   },
+   {
+    "id": "backup",
+    "num": "31",
+    "titulo": "Backup e Restore",
+    "itens": [
+     {
+      "id": "backup-estrategia",
+      "texto": "Estratégia de backup — começar pelo RPO e pelo RTO"
+     },
+     {
+      "id": "recovery-model",
+      "texto": "Recovery models — FULL, SIMPLE e BULK_LOGGED"
+     },
+     {
+      "id": "backup-full",
+      "texto": "Backup full — compressão, CHECKSUM e o que o backup não cobre"
+     },
+     {
+      "id": "backup-diff-log",
+      "texto": "Backup differential e de log — a cadeia de log"
+     },
+     {
+      "id": "copy-only",
+      "texto": "COPY_ONLY — backup avulso sem quebrar a cadeia"
+     },
+     {
+      "id": "tail-log",
+      "texto": "Tail-log backup — salvar as últimas transações antes do restore"
+     },
+     {
+      "id": "backup-performance",
+      "texto": "Backups mais rápidos — striping, BUFFERCOUNT e MAXTRANSFERSIZE"
+     },
+     {
+      "id": "backup-url",
+      "texto": "Backup para URL — Azure Blob e S3 (2022)"
+     },
+     {
+      "id": "restore",
+      "texto": "RESTORE — NORECOVERY, RECOVERY, STANDBY e MOVE"
+     },
+     {
+      "id": "restore-pitr",
+      "texto": "Point-in-time recovery — STOPAT e STOPATMARK na prática"
+     },
+     {
+      "id": "restore-page",
+      "texto": "Page restore e piecemeal restore — restaurar só o que quebrou"
+     },
+     {
+      "id": "restore-system",
+      "texto": "Restaurar master, msdb e model"
+     },
+     {
+      "id": "backup-verify",
+      "texto": "Validar backup — VERIFYONLY, HEADERONLY e FILELISTONLY"
+     },
+     {
+      "id": "test-restore",
+      "texto": "Testar restores automaticamente — backup bom é backup restaurado"
+     },
+     {
+      "id": "backup-historico",
+      "texto": "Histórico de backup no msdb — onde está cada arquivo e quanto tempo levou"
+     },
+     {
+      "id": "ola-backup",
+      "texto": "Ola Hallengren DatabaseBackup — a solução de backup que o mundo usa"
+     },
+     {
+      "id": "snapshot-backup",
+      "texto": "Snapshot backup via T-SQL (2022) — backup de storage consistente"
+     }
+    ]
+   },
+   {
+    "id": "agent",
+    "num": "32",
+    "titulo": "SQL Server Agent e Automação",
+    "itens": [
+     {
+      "id": "agent-intro",
+      "texto": "SQL Server Agent — arquitetura, serviço e o papel do msdb"
+     },
+     {
+      "id": "jobs",
+      "texto": "Jobs — steps, schedules, fluxo de sucesso/falha e retries"
+     },
+     {
+      "id": "job-historico",
+      "texto": "Histórico de jobs — ler, reter e limpar"
+     },
+     {
+      "id": "ssms-agent-alerts",
+      "texto": "Alerts — severidades 16 a 25, erros 823/824/825 e performance conditions"
+     },
+     {
+      "id": "ssms-agent-operators",
+      "texto": "Operators e notificações"
+     },
+     {
+      "id": "proxies",
+      "texto": "Proxies e subsystems — steps PowerShell e CmdExec com outra credencial"
+     },
+     {
+      "id": "dbmail",
+      "texto": "Database Mail — configurar SMTP para jobs e alerts"
+     },
+     {
+      "id": "maintenance-plans",
+      "texto": "Maintenance Plans vs scripts T-SQL — por que scripts são mais flexíveis"
+     },
+     {
+      "id": "dbatools",
+      "texto": "dbatools — automação de DBA com PowerShell"
+     },
+     {
+      "id": "powershell-sql",
+      "texto": "Módulo SqlServer do PowerShell e Invoke-Sqlcmd"
+     },
+     {
+      "id": "cms",
+      "texto": "Central Management Server e administração multi-servidor"
+     },
+     {
+      "id": "pbm",
+      "texto": "Policy-Based Management — padronizar configurações entre instâncias"
+     }
+    ]
+   },
+   {
+    "id": "manutencao",
+    "num": "33",
+    "titulo": "Manutenção",
+    "itens": [
+     {
+      "id": "rotina-manutencao",
+      "texto": "A rotina essencial — backup, CHECKDB, índices, estatísticas e limpeza"
+     },
+     {
+      "id": "dbcc",
+      "texto": "Comandos DBCC — quais existem, para que servem e quais são perigosos"
+     },
+     {
+      "id": "checkdb",
+      "texto": "DBCC CHECKDB a fundo — PHYSICAL_ONLY, frequência e bancos gigantes"
+     },
+     {
+      "id": "corrupcao",
+      "texto": "Corrupção — erros 823/824/825, suspect_pages e REPAIR_ALLOW_DATA_LOSS como último recurso"
+     },
+     {
+      "id": "manut-indices",
+      "texto": "Manutenção de índices — thresholds realistas e quando só estatística basta"
+     },
+     {
+      "id": "ola-manutencao",
+      "texto": "Ola Hallengren — IndexOptimize e DatabaseIntegrityCheck"
+     },
+     {
+      "id": "limpeza-msdb",
+      "texto": "Limpeza do msdb — histórico de backup, jobs e e-mails"
+     },
+     {
+      "id": "errorlog",
+      "texto": "Error log — ler, ciclar (sp_cycle_errorlog) e configurar retenção"
+     }
+    ]
+   },
+   {
+    "id": "monitoramento",
+    "num": "34",
+    "titulo": "Monitoramento e Troubleshooting",
+    "itens": [
+     {
+      "id": "sp-whoisactive",
+      "texto": "sp_WhoIsActive — a primeira coisa a rodar quando o banco trava"
+     },
+     {
+      "id": "first-responder",
+      "texto": "First Responder Kit — sp_Blitz, sp_BlitzFirst, sp_BlitzCache, sp_BlitzIndex e sp_BlitzLock"
+     },
+     {
+      "id": "dmvs-dba",
+      "texto": "DMVs essenciais — dm_exec_requests, dm_exec_sessions, dm_os_wait_stats, dm_io_virtual_file_stats"
+     },
+     {
+      "id": "ssms-activity-monitor",
+      "texto": "Activity Monitor — Processes, Waiting Tasks, Data File I/O e Expensive Queries"
+     },
+     {
+      "id": "perf-counters",
+      "texto": "PerfMon — PLE, Batch Requests/sec, Buffer Cache Hit Ratio e o que realmente vale olhar"
+     },
+     {
+      "id": "ssms-extended-events",
+      "texto": "Extended Events — sessions, targets e a substituição do Profiler"
+     },
+     {
+      "id": "system-health",
+      "texto": "Sessão system_health — a caixa-preta que já está gravando"
+     },
+     {
+      "id": "default-trace",
+      "texto": "Default trace — quem alterou, quem apagou e autogrowths recentes"
+     },
+     {
+      "id": "blocking-diag",
+      "texto": "Bloqueio em produção — achar o head blocker e decidir se usa o KILL"
+     },
+     {
+      "id": "cpu-alta",
+      "texto": "CPU em 100% — roteiro de diagnóstico"
+     },
+     {
+      "id": "conexao-erros",
+      "texto": "Falhas de login e conexão — erro 18456 e seus states, timeouts"
+     },
+     {
+      "id": "baseline",
+      "texto": "Baseline — saber o que é normal para reconhecer o anormal"
+     },
+     {
+      "id": "ferramentas-monitor",
+      "texto": "Ferramentas de monitoramento — SQL Sentry, Redgate Monitor, Grafana e afins"
+     }
+    ]
+   },
+   {
+    "id": "ssms",
+    "num": "35",
+    "titulo": "SSMS a fundo — Object Explorer nó a nó",
+    "itens": [
+     {
+      "id": "ssms-tour",
+      "texto": "Mapa completo do Object Explorer — todos os nós da instância e o que cada um representa"
+     },
+     {
+      "id": "ssms-db-props",
+      "texto": "Propriedades do banco — as páginas General, Files, Filegroups, Options e o que mexer"
+     },
+     {
+      "id": "ssms-tables-node",
+      "texto": "Nó Tables — colunas, keys, constraints, triggers, índices e statistics pelo Explorer"
+     },
+     {
+      "id": "ssms-programmability",
+      "texto": "Nó Programmability — procedures, functions, types, sequences, assemblies e plan guides"
+     },
+     {
+      "id": "ssms-query-store",
+      "texto": "Query Store no SSMS — Top Resource Consumers, Regressed Queries e forçar plano"
+     },
+     {
+      "id": "ssms-security-db",
+      "texto": "Security (banco) — users, roles, schemas, certificates, keys e Always Encrypted keys"
+     },
+     {
+      "id": "ssms-security-inst",
+      "texto": "Security (instância) — logins, server roles, credentials, audits"
+     },
+     {
+      "id": "ssms-server-objects",
+      "texto": "Server Objects — backup devices, endpoints, linked servers e server triggers"
+     },
+     {
+      "id": "ssms-replication",
+      "texto": "Nó Replication — publicações, assinaturas e Replication Monitor"
+     },
+     {
+      "id": "ssms-alwayson",
+      "texto": "Nó Always On High Availability — availability groups, réplicas e dashboard"
+     },
+     {
+      "id": "ssms-management",
+      "texto": "Nó Management — logs, Database Mail, Resource Governor, Extended Events, PBM"
+     },
+     {
+      "id": "ssms-ssis-catalog",
+      "texto": "Nó Integration Services Catalogs — o SSISDB"
+     },
+     {
+      "id": "ssms-agent-jobs",
+      "texto": "Nó SQL Server Agent — Jobs, Job Activity Monitor, Alerts, Operators, Proxies, Error Logs"
+     },
+     {
+      "id": "ssms-xevent-profiler",
+      "texto": "XEvent Profiler — o “Profiler” moderno de um clique"
+     },
+     {
+      "id": "ssms-reports",
+      "texto": "Standard Reports — disco, top queries, schema changes prontos"
+     },
+     {
+      "id": "ssms-gerar-scripts",
+      "texto": "Generate Scripts — scriptar objetos e dados"
+     },
+     {
+      "id": "ssms-import-export",
+      "texto": "Import/Export Wizard e Import Flat File"
+     },
+     {
+      "id": "ssms-registered",
+      "texto": "Registered Servers — rodar uma query em várias instâncias ao mesmo tempo"
+     },
+     {
+      "id": "ssms-sqlcmd-mode",
+      "texto": "Modo SQLCMD — variáveis e :CONNECT dentro do SSMS"
+     },
+     {
+      "id": "ssms-diagrams",
+      "texto": "Database Diagrams e a tela de Designer — usar ou evitar?"
+     },
+     {
+      "id": "ssms-copilot",
+      "texto": "Copilot no SSMS — IA para escrever e explicar T-SQL (com senso crítico)"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "nivel": 6,
+  "secao": "arquitetura",
+  "label": "Trilha 6",
+  "titulo": "Arquitetura e Escala",
+  "descricao": "HA/DR, replicação, dados em movimento, DevOps, nuvem e IA",
+  "categorias": [
+   {
+    "id": "ha",
+    "num": "36",
+    "titulo": "Alta Disponibilidade e Disaster Recovery",
+    "itens": [
+     {
+      "id": "ha-intro",
+      "texto": "RPO e RTO — o que cada solução garante"
+     },
+     {
+      "id": "ha-vs-dr",
+      "texto": "HA vs DR — não são a mesma coisa"
+     },
+     {
+      "id": "log-shipping",
+      "texto": "Log shipping — backups de log enviados para um secundário"
+     },
+     {
+      "id": "mirroring",
+      "texto": "Database mirroring — síncrono, assíncrono e witness"
+     },
+     {
+      "id": "wsfc",
+      "texto": "Windows Server Failover Cluster — quorum, votos e witness"
+     },
+     {
+      "id": "fci",
+      "texto": "Failover Cluster Instance (FCI) — HA de instância com storage compartilhado"
+     },
+     {
+      "id": "alwayson",
+      "texto": "Always On Availability Groups — conceitos e primeira configuração"
+     },
+     {
+      "id": "ag-sync",
+      "texto": "Síncrono vs assíncrono — commit modes e perda de dados"
+     },
+     {
+      "id": "ag-listener",
+      "texto": "Listener, read-only routing e secundários legíveis"
+     },
+     {
+      "id": "ag-tipos",
+      "texto": "Basic AG, Distributed AG e Contained AG (2022)"
+     },
+     {
+      "id": "ag-monitor",
+      "texto": "Monitorar AG — send queue, redo queue e latência"
+     },
+     {
+      "id": "ag-failover",
+      "texto": "Failover planejado, automático e forçado — e testes de DR"
+     },
+     {
+      "id": "cdc-intro-ha",
+      "texto": "Log shipping vs AG vs replicação vs backup — qual resolve qual problema"
+     }
+    ]
+   },
+   {
+    "id": "replicacao",
+    "num": "37",
+    "titulo": "Replicação",
+    "itens": [
+     {
+      "id": "repl-intro",
+      "texto": "Arquitetura — Publisher, Distributor e Subscriber"
+     },
+     {
+      "id": "repl-agentes",
+      "texto": "Distribution database e os agentes — Snapshot, Log Reader, Distribution e Merge"
+     },
+     {
+      "id": "repl-snapshot",
+      "texto": "Snapshot replication — cópia completa periódica"
+     },
+     {
+      "id": "repl-transacional",
+      "texto": "Transactional replication — quase em tempo real pelo log"
+     },
+     {
+      "id": "repl-p2p",
+      "texto": "Peer-to-peer replication — todos publicam, e os conflitos"
+     },
+     {
+      "id": "repl-merge",
+      "texto": "Merge replication — sincronização bidirecional e resolução de conflitos"
+     },
+     {
+      "id": "repl-monitor",
+      "texto": "Replication Monitor, tracer tokens e latência"
+     },
+     {
+      "id": "repl-problemas",
+      "texto": "Problemas comuns — linha não encontrada, reinicialização e mudança de schema"
+     },
+     {
+      "id": "repl-vs",
+      "texto": "Replicação ainda faz sentido? — comparação com AG e CDC"
+     }
+    ]
+   },
+   {
+    "id": "cdc",
+    "num": "38",
+    "titulo": "CDC e Carga Incremental (ETL Delta)",
+    "itens": [
+     {
+      "id": "cdc-conceito",
+      "texto": "O que é CDC — como ele lê o transaction log sem tocar nas tabelas"
+     },
+     {
+      "id": "ct",
+      "texto": "Change Tracking vs CDC — o que cada um rastreia e quando usar"
+     },
+     {
+      "id": "cdc-habilitar",
+      "texto": "Habilitar CDC — banco e tabela, permissões e jobs criados"
+     },
+     {
+      "id": "cdc-tabelas",
+      "texto": "Tabelas de mudança — __$operation, __$start_lsn, __$seqval, __$update_mask"
+     },
+     {
+      "id": "cdc-lsn",
+      "texto": "LSN — o que é e por que é a âncora de tudo no CDC"
+     },
+     {
+      "id": "cdc-funcoes",
+      "texto": "fn_cdc_get_all_changes vs fn_cdc_get_net_changes"
+     },
+     {
+      "id": "hwm",
+      "texto": "High Water Mark — carregar somente o delta desde a última carga"
+     },
+     {
+      "id": "hwm-tabela",
+      "texto": "Tabela de controle de carga — HWM por tabela, histórico e status"
+     },
+     {
+      "id": "hwm-sem-cdc",
+      "texto": "HWM sem CDC — ROWVERSION ou data de alteração, e as armadilhas"
+     },
+     {
+      "id": "cdc-etl-full",
+      "texto": "Full load vs delta load — carga inicial e cargas incrementais"
+     },
+     {
+      "id": "cdc-aplicar",
+      "texto": "Aplicar o delta no destino — staging, MERGE e deletes"
+     },
+     {
+      "id": "etl-idempotente",
+      "texto": "ETL idempotente — reprocessar sem duplicar nem perder"
+     },
+     {
+      "id": "cdc-deletes",
+      "texto": "Rastrear DELETEs — recuperar o dado apagado antes de propagar"
+     },
+     {
+      "id": "cdc-retencao",
+      "texto": "Retenção e limpeza — por quanto tempo o CDC guarda mudanças"
+     },
+     {
+      "id": "cdc-latencia",
+      "texto": "Latência e monitoramento — CDC não é tempo real"
+     },
+     {
+      "id": "cdc-schema-change",
+      "texto": "Mudança de schema com CDC ligado — capture instances"
+     },
+     {
+      "id": "ces",
+      "texto": "Change Event Streaming (2025) — mudanças publicadas direto em streaming"
+     },
+     {
+      "id": "cdc-debezium",
+      "texto": "Debezium e Kafka — CDC moderno e arquitetura orientada a eventos"
+     }
+    ]
+   },
+   {
+    "id": "integracao",
+    "num": "39",
+    "titulo": "Integração e ETL",
+    "itens": [
+     {
+      "id": "ssis-intro",
+      "texto": "SSIS — o que é, quando usar e quando não usar"
+     },
+     {
+      "id": "ssis-pacote",
+      "texto": "Primeiro pacote SSIS — Control Flow, Data Flow e conexões"
+     },
+     {
+      "id": "ssis-catalog",
+      "texto": "SSISDB — deploy, ambientes, parâmetros e execução"
+     },
+     {
+      "id": "bcp",
+      "texto": "BCP — exportar e importar em massa pela linha de comando"
+     },
+     {
+      "id": "linked",
+      "texto": "Linked servers — configurar, performance e riscos de segurança"
+     },
+     {
+      "id": "openquery",
+      "texto": "OPENQUERY, OPENROWSET e OPENDATASOURCE — consultas distribuídas"
+     },
+     {
+      "id": "polybase",
+      "texto": "PolyBase e virtualização de dados — ler Parquet e CSV no S3/Azure (2022)"
+     },
+     {
+      "id": "rest-endpoint",
+      "texto": "sp_invoke_external_rest_endpoint (2025) — chamar APIs direto do T-SQL"
+     },
+     {
+      "id": "adf",
+      "texto": "Azure Data Factory e Fabric Data Factory — ETL na nuvem com SQL Server"
+     }
+    ]
+   },
+   {
+    "id": "devops",
+    "num": "40",
+    "titulo": "DevOps de Banco de Dados",
+    "itens": [
+     {
+      "id": "source-control",
+      "texto": "Banco no Git — state-based vs migration-based"
+     },
+     {
+      "id": "ssdt",
+      "texto": "SQL Database Projects — o banco como código"
+     },
+     {
+      "id": "dacpac",
+      "texto": "DACPAC e BACPAC — publicar schema e exportar dados"
+     },
+     {
+      "id": "sqlpackage",
+      "texto": "SqlPackage — deploy e comparação de schema via linha de comando"
+     },
+     {
+      "id": "schema-compare",
+      "texto": "Schema compare e data compare"
+     },
+     {
+      "id": "migrations",
+      "texto": "Migrations com Flyway ou DbUp"
+     },
+     {
+      "id": "cicd",
+      "texto": "CI/CD para banco — pipeline com GitHub Actions ou Azure DevOps"
+     },
+     {
+      "id": "tsqlt",
+      "texto": "Testes unitários com tSQLt"
+     },
+     {
+      "id": "code-review",
+      "texto": "Code review de T-SQL — o checklist do que olhar num PR"
+     },
+     {
+      "id": "deploy-seguro",
+      "texto": "Deploy seguro em produção — rollback, feature flags e mudanças sem downtime"
+     }
+    ]
+   },
+   {
+    "id": "cloud",
+    "num": "41",
+    "titulo": "Nuvem, Linux e Containers",
+    "itens": [
+     {
+      "id": "azure-opcoes",
+      "texto": "Azure SQL Database vs Managed Instance vs SQL Server em VM — qual escolher"
+     },
+     {
+      "id": "azure-sqldb",
+      "texto": "Azure SQL Database — DTU vs vCore, serverless e Hyperscale"
+     },
+     {
+      "id": "azure-mi",
+      "texto": "Azure SQL Managed Instance — quase todo o SQL Server, gerenciado"
+     },
+     {
+      "id": "mi-link",
+      "texto": "Managed Instance link — DR híbrido com AG"
+     },
+     {
+      "id": "aws-rds",
+      "texto": "SQL Server no Amazon RDS — o que muda para o DBA"
+     },
+     {
+      "id": "linux",
+      "texto": "SQL Server no Linux — instalação, mssql-conf e diferenças"
+     },
+     {
+      "id": "containers",
+      "texto": "Containers e Kubernetes em produção"
+     },
+     {
+      "id": "migracao-cloud",
+      "texto": "Migração para a nuvem — avaliação, compatibilidade e ferramentas"
+     },
+     {
+      "id": "arc",
+      "texto": "Azure Arc — gerenciar SQL Server on-premises pelo Azure"
+     },
+     {
+      "id": "fabric",
+      "texto": "SQL no Microsoft Fabric — SQL database, Mirroring e Warehouse"
+     }
+    ]
+   },
+   {
+    "id": "moderno",
+    "num": "42",
+    "titulo": "SQL Server Moderno — 2019, 2022, 2025 e IA",
+    "itens": [
+     {
+      "id": "novidades-2019",
+      "texto": "O que o 2019 trouxe — IQP, ADR, UTF-8 e UDF inlining"
+     },
+     {
+      "id": "novidades-2022",
+      "texto": "O que o 2022 trouxe — PSP, Query Store hints, Ledger, Contained AG, S3"
+     },
+     {
+      "id": "novidades-2025",
+      "texto": "O que o 2025 trouxe — JSON nativo, regex, vetores, optimized locking"
+     },
+     {
+      "id": "vector-type",
+      "texto": "Tipo VECTOR e VECTOR_DISTANCE — busca semântica dentro do SQL Server"
+     },
+     {
+      "id": "embeddings",
+      "texto": "Gerar embeddings no T-SQL — CREATE EXTERNAL MODEL e AI_GENERATE_EMBEDDINGS"
+     },
+     {
+      "id": "vector-index",
+      "texto": "Índice vetorial (DiskANN) e VECTOR_SEARCH"
+     },
+     {
+      "id": "rag",
+      "texto": "RAG com SQL Server — um chatbot que responde com os seus dados"
+     },
+     {
+      "id": "ia-dba",
+      "texto": "IA no dia a dia do DBA — como revisar o T-SQL que a IA gerou"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "nivel": 7,
+  "secao": "referencia",
+  "label": "Trilha 7",
+  "titulo": "Referência — Comandos e Objetos de Sistema",
+  "descricao": "Um verbete por procedure, comando, DBCC, função e DMV — o dicionário do SQL Server",
+  "categorias": [
+   {
+    "id": "ref-sp-meta",
+    "num": "43",
+    "titulo": "Procedures de sistema — metadados e objetos",
+    "itens": [
+     {
+      "id": "ref-sp-help",
+      "texto": "sp_help — tudo sobre um objeto de uma vez (o famoso Alt+F1)"
+     },
+     {
+      "id": "ref-sp-helptext",
+      "texto": "sp_helptext — ver o código de procedure, view e function (e OBJECT_DEFINITION como alternativa)"
+     },
+     {
+      "id": "ref-sp-helpindex",
+      "texto": "sp_helpindex — índices de uma tabela, e por que ele esconde INCLUDE e filtro"
+     },
+     {
+      "id": "ref-sp-helpconstraint",
+      "texto": "sp_helpconstraint — todas as constraints de uma tabela"
+     },
+     {
+      "id": "ref-sp-helpstats",
+      "texto": "sp_helpstats — estatísticas de uma tabela"
+     },
+     {
+      "id": "ref-sp-helptrigger",
+      "texto": "sp_helptrigger — triggers de uma tabela"
+     },
+     {
+      "id": "ref-sp-spaceused",
+      "texto": "sp_spaceused — espaço do banco e de uma tabela (reserved, data, index_size, unused) e @updateusage"
+     },
+     {
+      "id": "ref-sp-helpdb",
+      "texto": "sp_helpdb — bancos, tamanhos, owner e arquivos"
+     },
+     {
+      "id": "ref-sp-helpfile",
+      "texto": "sp_helpfile e sp_helpfilegroup — arquivos e filegroups do banco atual"
+     },
+     {
+      "id": "ref-sp-depends",
+      "texto": "sp_depends (deprecated) → sys.dm_sql_referencing_entities e referenced_entities"
+     },
+     {
+      "id": "ref-sp-catalogo-odbc",
+      "texto": "sp_tables, sp_columns, sp_pkeys, sp_fkeys, sp_stored_procedures — o catálogo estilo ODBC"
+     },
+     {
+      "id": "ref-sp-describe",
+      "texto": "sp_describe_first_result_set e sp_describe_undeclared_parameters — descobrir o formato do resultado sem executar"
+     },
+     {
+      "id": "ref-sp-rename",
+      "texto": "sp_rename — renomear tabela, coluna e índice (e o que quebra quando você renomeia)"
+     },
+     {
+      "id": "ref-sp-refreshview",
+      "texto": "sp_refreshview e sp_refreshsqlmodule — atualizar metadados depois de mudar a tabela"
+     },
+     {
+      "id": "ref-sp-extprop",
+      "texto": "sp_addextendedproperty, sp_updateextendedproperty e fn_listextendedproperty — documentar no próprio banco"
+     },
+     {
+      "id": "ref-sp-msforeach",
+      "texto": "sp_MSforeachdb e sp_MSforeachtable — não documentadas: úteis e traiçoeiras (às vezes pulam bancos)"
+     }
+    ]
+   },
+   {
+    "id": "ref-sp-exec",
+    "num": "44",
+    "titulo": "Procedures de sistema — execução, sessões e performance",
+    "itens": [
+     {
+      "id": "ref-sp-executesql",
+      "texto": "sp_executesql — parâmetros, OUTPUT e reuso de plano (a diferença para EXEC)"
+     },
+     {
+      "id": "ref-sp-who",
+      "texto": "sp_who e sp_who2 — quem está conectado, e por que migrar para DMVs e sp_WhoIsActive"
+     },
+     {
+      "id": "ref-sp-lock",
+      "texto": "sp_lock (deprecated) → sys.dm_tran_locks"
+     },
+     {
+      "id": "ref-sp-recompile",
+      "texto": "sp_recompile — marcar procedure ou tabela para recompilar"
+     },
+     {
+      "id": "ref-sp-updatestats",
+      "texto": "sp_updatestats — atualizar estatísticas do banco inteiro (e o que ele pula)"
+     },
+     {
+      "id": "ref-sp-applock",
+      "texto": "sp_getapplock e sp_releaseapplock — lock lógico da aplicação (um “mutex” no banco)"
+     },
+     {
+      "id": "ref-sp-session-context",
+      "texto": "sp_set_session_context e SESSION_CONTEXT — contexto por sessão (usado com RLS)"
+     },
+     {
+      "id": "ref-sp-procoption",
+      "texto": "sp_procoption — procedure que roda automaticamente quando a instância sobe"
+     },
+     {
+      "id": "ref-sp-plan-guide",
+      "texto": "sp_create_plan_guide e sp_control_plan_guide"
+     },
+     {
+      "id": "ref-sp-querystore",
+      "texto": "sp_query_store_force_plan, unforce_plan, set_hints e flush_db"
+     },
+     {
+      "id": "ref-sp-compression",
+      "texto": "sp_estimate_data_compression_savings — quanto a compressão vai economizar"
+     }
+    ]
+   },
+   {
+    "id": "ref-sp-admin",
+    "num": "45",
+    "titulo": "Procedures de sistema — segurança, instância e Agent",
+    "itens": [
+     {
+      "id": "ref-sp-helplogins",
+      "texto": "sp_helplogins, sp_helpuser, sp_helprolemember e sp_helpsrvrolemember"
+     },
+     {
+      "id": "ref-sp-helprotect",
+      "texto": "sp_helprotect — permissões de um objeto (e sys.database_permissions)"
+     },
+     {
+      "id": "ref-sp-change-users",
+      "texto": "sp_change_users_login (deprecated) → ALTER USER … WITH LOGIN"
+     },
+     {
+      "id": "ref-sp-validatelogins",
+      "texto": "sp_validatelogins — logins Windows que não existem mais no AD"
+     },
+     {
+      "id": "ref-sp-addrolemember",
+      "texto": "sp_addrolemember e sp_addsrvrolemember (deprecated) → ALTER ROLE … ADD MEMBER"
+     },
+     {
+      "id": "ref-sp-help-revlogin",
+      "texto": "sp_help_revlogin — migrar logins com a mesma senha e o mesmo SID entre servidores"
+     },
+     {
+      "id": "ref-sp-linked",
+      "texto": "sp_addlinkedserver, sp_addlinkedsrvlogin, sp_linkedservers e sp_testlinkedserver"
+     },
+     {
+      "id": "ref-sp-attach",
+      "texto": "sp_attach_db e sp_detach_db (attach deprecated) → CREATE DATABASE … FOR ATTACH"
+     },
+     {
+      "id": "ref-sp-readerrorlog",
+      "texto": "sp_readerrorlog e sp_cycle_errorlog — ler e rotacionar o error log"
+     },
+     {
+      "id": "ref-sp-jobs",
+      "texto": "sp_start_job, sp_stop_job, sp_help_job e sp_help_jobhistory (msdb)"
+     },
+     {
+      "id": "ref-sp-add-job",
+      "texto": "sp_add_job, sp_add_jobstep, sp_add_schedule e sp_attach_schedule — criar job por script"
+     },
+     {
+      "id": "ref-sp-send-dbmail",
+      "texto": "sp_send_dbmail — mandar e-mail com resultado de query em anexo"
+     },
+     {
+      "id": "ref-sp-limpeza-msdb",
+      "texto": "sp_delete_backuphistory e sp_purge_jobhistory — limpar o msdb"
+     }
+    ]
+   },
+   {
+    "id": "ref-xp",
+    "num": "46",
+    "titulo": "Extended procedures — xp_",
+    "itens": [
+     {
+      "id": "ref-xp-cmdshell",
+      "texto": "xp_cmdshell — o que faz, por que fica desligado e as alternativas"
+     },
+     {
+      "id": "ref-xp-readerrorlog",
+      "texto": "xp_readerrorlog — os parâmetros (log, tipo, busca, período)"
+     },
+     {
+      "id": "ref-xp-fixeddrives",
+      "texto": "xp_fixeddrives — espaço livre em disco (e sys.dm_os_volume_stats)"
+     },
+     {
+      "id": "ref-xp-dirtree",
+      "texto": "xp_dirtree, xp_fileexist e xp_create_subdir — mexer em pastas pelo T-SQL (não documentadas)"
+     },
+     {
+      "id": "ref-xp-delete-file",
+      "texto": "xp_delete_file — apagar backups antigos (é o que o Maintenance Plan usa)"
+     },
+     {
+      "id": "ref-xp-logininfo",
+      "texto": "xp_logininfo — de qual grupo do AD vem o acesso de um usuário"
+     },
+     {
+      "id": "ref-xp-msver",
+      "texto": "xp_msver — versão e hardware da instância"
+     },
+     {
+      "id": "ref-xp-regread",
+      "texto": "xp_instance_regread — ler o registro do Windows (não documentada)"
+     }
+    ]
+   },
+   {
+    "id": "ref-dbcc",
+    "num": "47",
+    "titulo": "Comandos DBCC — referência completa",
+    "itens": [
+     {
+      "id": "ref-dbcc-check",
+      "texto": "DBCC CHECKALLOC, CHECKCATALOG, CHECKTABLE e CHECKFILEGROUP — as peças que formam o CHECKDB"
+     },
+     {
+      "id": "ref-dbcc-checkident",
+      "texto": "DBCC CHECKIDENT — ver e resetar o valor do IDENTITY (RESEED, NORESEED)"
+     },
+     {
+      "id": "ref-dbcc-checkconstraints",
+      "texto": "DBCC CHECKCONSTRAINTS — achar linhas que violam constraints"
+     },
+     {
+      "id": "ref-dbcc-sqlperf",
+      "texto": "DBCC SQLPERF(LOGSPACE) — uso do log de todos os bancos (e zerar wait stats)"
+     },
+     {
+      "id": "ref-dbcc-opentran",
+      "texto": "DBCC OPENTRAN — a transação aberta mais antiga do banco"
+     },
+     {
+      "id": "ref-dbcc-inputbuffer",
+      "texto": "DBCC INPUTBUFFER e OUTPUTBUFFER → sys.dm_exec_input_buffer"
+     },
+     {
+      "id": "ref-dbcc-freeproccache",
+      "texto": "DBCC FREEPROCCACHE, FREESYSTEMCACHE e FLUSHPROCINDB — limpar cache de plano (e o estrago em produção)"
+     },
+     {
+      "id": "ref-dbcc-dropcleanbuffers",
+      "texto": "DBCC DROPCLEANBUFFERS — cache frio para testar performance (nunca em produção)"
+     },
+     {
+      "id": "ref-dbcc-trace",
+      "texto": "DBCC TRACEON, TRACEOFF e TRACESTATUS"
+     },
+     {
+      "id": "ref-dbcc-useroptions",
+      "texto": "DBCC USEROPTIONS — as SET options da sua sessão"
+     },
+     {
+      "id": "ref-dbcc-updateusage",
+      "texto": "DBCC UPDATEUSAGE — corrigir contagem de páginas e linhas"
+     },
+     {
+      "id": "ref-dbcc-memorystatus",
+      "texto": "DBCC MEMORYSTATUS — raio-X da memória da instância"
+     },
+     {
+      "id": "ref-dbcc-clonedatabase",
+      "texto": "DBCC CLONEDATABASE — clone só com schema e estatísticas para investigar plano"
+     },
+     {
+      "id": "ref-dbcc-cleantable",
+      "texto": "DBCC CLEANTABLE — recuperar espaço depois de dropar coluna variável"
+     },
+     {
+      "id": "ref-dbcc-page",
+      "texto": "DBCC PAGE, DBCC IND e DBCC DBINFO — não documentados, para estudar internals"
+     },
+     {
+      "id": "ref-dbcc-loginfo",
+      "texto": "DBCC LOGINFO (legado) → sys.dm_db_log_info"
+     },
+     {
+      "id": "ref-dbcc-deprecated",
+      "texto": "DBREINDEX, INDEXDEFRAG e SHOWCONTIG (deprecated) → ALTER INDEX e dm_db_index_physical_stats"
+     },
+     {
+      "id": "ref-dbcc-help",
+      "texto": "DBCC HELP — a ajuda embutida de cada comando DBCC"
+     }
+    ]
+   },
+   {
+    "id": "ref-comandos",
+    "num": "48",
+    "titulo": "Comandos administrativos e SET de sessão",
+    "itens": [
+     {
+      "id": "ref-checkpoint",
+      "texto": "CHECKPOINT — forçar a gravação das dirty pages (e o parâmetro de duração)"
+     },
+     {
+      "id": "ref-kill",
+      "texto": "KILL — encerrar sessão, KILL … WITH STATUSONLY e o rollback que nunca termina"
+     },
+     {
+      "id": "ref-shutdown",
+      "texto": "SHUTDOWN e SHUTDOWN WITH NOWAIT"
+     },
+     {
+      "id": "ref-reconfigure",
+      "texto": "RECONFIGURE e RECONFIGURE WITH OVERRIDE"
+     },
+     {
+      "id": "ref-waitfor",
+      "texto": "WAITFOR DELAY e WAITFOR TIME — pausar a execução"
+     },
+     {
+      "id": "ref-execute-as-revert",
+      "texto": "EXECUTE AS LOGIN/USER e REVERT — testar permissões como outro usuário"
+     },
+     {
+      "id": "ref-db-scoped-config",
+      "texto": "ALTER DATABASE SCOPED CONFIGURATION — MAXDOP, sniffing e limpar cache por banco"
+     },
+     {
+      "id": "ref-server-config",
+      "texto": "ALTER SERVER CONFIGURATION — affinity, buffer pool extension, diagnostic log"
+     },
+     {
+      "id": "ref-identity-insert",
+      "texto": "SET IDENTITY_INSERT — inserir valor explícito numa coluna IDENTITY"
+     },
+     {
+      "id": "ref-lock-timeout",
+      "texto": "SET LOCK_TIMEOUT e SET DEADLOCK_PRIORITY"
+     },
+     {
+      "id": "ref-dateformat",
+      "texto": "SET DATEFORMAT, SET LANGUAGE e SET DATEFIRST — por que '01/02/2024' pode ser janeiro ou fevereiro"
+     },
+     {
+      "id": "ref-rowcount",
+      "texto": "SET ROWCOUNT (deprecated para DML) vs TOP"
+     },
+     {
+      "id": "ref-showplan",
+      "texto": "SET SHOWPLAN_XML/TEXT/ALL e SET STATISTICS XML/PROFILE — plano via comando"
+     },
+     {
+      "id": "ref-noexec",
+      "texto": "SET NOEXEC e SET PARSEONLY — validar script sem executar"
+     },
+     {
+      "id": "ref-context-info",
+      "texto": "SET CONTEXT_INFO vs SESSION_CONTEXT"
+     }
+    ]
+   },
+   {
+    "id": "ref-funcoes",
+    "num": "49",
+    "titulo": "Variáveis @@ e funções de sistema",
+    "itens": [
+     {
+      "id": "ref-error",
+      "texto": "@@ERROR vs ERROR_NUMBER() — por que @@ERROR zera a cada comando"
+     },
+     {
+      "id": "ref-rowcount-var",
+      "texto": "@@ROWCOUNT e ROWCOUNT_BIG() — e o que zera o valor sem você perceber"
+     },
+     {
+      "id": "ref-trancount-xactstate",
+      "texto": "@@TRANCOUNT e XACT_STATE() — a transação ainda pode ser commitada?"
+     },
+     {
+      "id": "ref-servername",
+      "texto": "@@SPID, @@SERVERNAME, @@SERVICENAME e @@VERSION"
+     },
+     {
+      "id": "ref-fetch-status",
+      "texto": "@@FETCH_STATUS — o controle do loop de cursor"
+     },
+     {
+      "id": "ref-options",
+      "texto": "@@OPTIONS — decodificar as SET options da sessão"
+     },
+     {
+      "id": "ref-dbts",
+      "texto": "@@DBTS e MIN_ACTIVE_ROWVERSION() — trabalhando com ROWVERSION"
+     },
+     {
+      "id": "ref-nestlevel",
+      "texto": "@@NESTLEVEL e @@PROCID — contexto dentro de procedures e triggers"
+     },
+     {
+      "id": "ref-datefirst",
+      "texto": "@@DATEFIRST, @@LANGUAGE e @@LOCK_TIMEOUT"
+     },
+     {
+      "id": "ref-meta-nomes",
+      "texto": "OBJECT_ID, OBJECT_NAME, OBJECT_SCHEMA_NAME, SCHEMA_NAME, TYPE_NAME, COL_NAME e OBJECT_DEFINITION"
+     },
+     {
+      "id": "ref-property",
+      "texto": "OBJECTPROPERTY, COLUMNPROPERTY, INDEXPROPERTY, DATABASEPROPERTYEX, SERVERPROPERTY e FILEPROPERTY"
+     },
+     {
+      "id": "ref-seguranca-func",
+      "texto": "HAS_PERMS_BY_NAME, fn_my_permissions, IS_MEMBER, IS_SRVROLEMEMBER e ORIGINAL_LOGIN"
+     },
+     {
+      "id": "ref-conexao-func",
+      "texto": "HOST_NAME, APP_NAME, SUSER_SNAME, USER_NAME e CONNECTIONPROPERTY — quem é essa conexão?"
+     },
+     {
+      "id": "ref-checksum",
+      "texto": "CHECKSUM, BINARY_CHECKSUM e HASHBYTES — detectar linhas alteradas"
+     },
+     {
+      "id": "ref-fn-dblog",
+      "texto": "fn_dblog e fn_dump_dblog — ler o transaction log e descobrir quem apagou (não documentadas)"
+     },
+     {
+      "id": "ref-physloc",
+      "texto": "%%physloc%% e sys.fn_PhysLocFormatter — em que página a linha está (não documentado)"
+     },
+     {
+      "id": "ref-read-files",
+      "texto": "sys.fn_xe_file_target_read_file, sys.fn_get_audit_file e fn_trace_gettable — ler arquivos de XE, audit e trace"
+     },
+     {
+      "id": "ref-hadr-func",
+      "texto": "sys.fn_hadr_is_primary_replica — job que só roda na réplica primária"
+     }
+    ]
+   },
+   {
+    "id": "ref-dmvs",
+    "num": "50",
+    "titulo": "DMVs e DMFs — mapa por família",
+    "itens": [
+     {
+      "id": "ref-dmv-intro",
+      "texto": "O que são DMVs e DMFs — permissões (VIEW SERVER STATE e as novas de 2022) e o reset no restart"
+     },
+     {
+      "id": "ref-dmv-exec",
+      "texto": "sys.dm_exec_* — requests, sessions, connections, sql_text, query_plan, query_stats, procedure_stats, cached_plans"
+     },
+     {
+      "id": "ref-dmv-exec-plano",
+      "texto": "sys.dm_exec_query_profiles, query_statistics_xml e query_plan_stats — o plano real enquanto roda"
+     },
+     {
+      "id": "ref-dmv-os",
+      "texto": "sys.dm_os_* — wait_stats, waiting_tasks, schedulers, sys_info, memory_clerks, performance_counters, ring_buffers"
+     },
+     {
+      "id": "ref-dmv-tran",
+      "texto": "sys.dm_tran_* — locks, active_transactions, session_transactions, version_store"
+     },
+     {
+      "id": "ref-dmv-db-index",
+      "texto": "sys.dm_db_index_* e missing_index_* — uso, física e operação dos índices"
+     },
+     {
+      "id": "ref-dmv-db-espaco",
+      "texto": "sys.dm_db_file_space_usage, session_space_usage, log_space_usage, log_info e log_stats"
+     },
+     {
+      "id": "ref-dmv-db-stats",
+      "texto": "sys.dm_db_stats_properties e dm_db_stats_histogram — estatísticas via query"
+     },
+     {
+      "id": "ref-dmv-io",
+      "texto": "sys.dm_io_virtual_file_stats e pending_io_requests"
+     },
+     {
+      "id": "ref-dmv-outras",
+      "texto": "sys.dm_hadr_*, dm_cdc_*, dm_repl_*, dm_xe_*, dm_resource_governor_* e dm_server_*"
+     },
+     {
+      "id": "ref-qs-views",
+      "texto": "Views do Query Store — sys.query_store_query, _plan, _runtime_stats e _wait_stats"
+     }
+    ]
+   },
+   {
+    "id": "ref-catalogo",
+    "num": "51",
+    "titulo": "Catalog views e tabelas do msdb",
+    "itens": [
+     {
+      "id": "ref-cat-objetos",
+      "texto": "sys.objects, sys.tables, sys.views, sys.procedures, sys.triggers e sys.sql_modules"
+     },
+     {
+      "id": "ref-cat-colunas",
+      "texto": "sys.columns, sys.types, sys.identity_columns, sys.computed_columns e sys.parameters"
+     },
+     {
+      "id": "ref-cat-indices",
+      "texto": "sys.indexes, sys.index_columns, sys.stats e sys.stats_columns"
+     },
+     {
+      "id": "ref-cat-constraints",
+      "texto": "sys.key_constraints, sys.foreign_keys, sys.foreign_key_columns, sys.check_constraints e sys.default_constraints"
+     },
+     {
+      "id": "ref-cat-storage",
+      "texto": "sys.partitions, sys.allocation_units, sys.filegroups, sys.database_files e sys.master_files"
+     },
+     {
+      "id": "ref-cat-databases",
+      "texto": "sys.databases e sys.configurations — estado e configuração de tudo"
+     },
+     {
+      "id": "ref-cat-seguranca",
+      "texto": "sys.server_principals, sys.database_principals, sys.server_permissions, sys.database_permissions e sys.database_role_members"
+     },
+     {
+      "id": "ref-cat-dependencias",
+      "texto": "sys.sql_expression_dependencies e sys.extended_properties"
+     },
+     {
+      "id": "ref-msdb-backup",
+      "texto": "msdb — backupset, backupmediafamily, backupfile e restorehistory"
+     },
+     {
+      "id": "ref-msdb-jobs",
+      "texto": "msdb — sysjobs, sysjobsteps, sysjobhistory, sysschedules e sysjobactivity"
+     },
+     {
+      "id": "ref-msdb-outras",
+      "texto": "msdb — suspect_pages, sysmail_* e log_shipping_*"
+     },
+     {
+      "id": "ref-cat-legado",
+      "texto": "sysobjects, syscolumns, sysindexes — as views de compatibilidade que você ainda vai achar em código antigo"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "nivel": 8,
+  "secao": "scripts",
+  "label": "Trilha 8",
+  "titulo": "Caixa de Ferramentas",
+  "descricao": "Scripts do dia a dia que salvam a sua pele",
+  "categorias": [
+   {
+    "id": "scripts",
+    "num": "52",
+    "titulo": "Scripts Úteis — o kit de sobrevivência",
+    "itens": [
+     {
+      "id": "s-instancia-info",
+      "texto": "Raio-X da instância — versão, edição, CU, uptime, CPUs, memória e configurações-chave"
+     },
+     {
+      "id": "s-bancos-overview",
+      "texto": "Visão geral de todos os bancos — tamanho, recovery model, compat level, owner e status"
+     },
+     {
+      "id": "s-config-perigosas",
+      "texto": "Configurações perigosas — AUTO_SHRINK, AUTO_CLOSE, PAGE_VERIFY diferente de CHECKSUM"
+     },
+     {
+      "id": "s-quem-roda",
+      "texto": "Quem está rodando agora — sessões ativas com query, plano, espera e duração"
+     },
+     {
+      "id": "s-bloqueio",
+      "texto": "Cadeia de bloqueio — quem é o head blocker e quem está esperando"
+     },
+     {
+      "id": "s-locks-sessao",
+      "texto": "Locks de uma sessão — o que ela está segurando, por objeto, recurso e modo"
+     },
+     {
+      "id": "s-kill-conexoes",
+      "texto": "Derrubar todas as conexões de um banco — SINGLE_USER WITH ROLLBACK IMMEDIATE"
+     },
+     {
+      "id": "s-progresso",
+      "texto": "Progresso de backup, restore, DBCC e rebuild — percent_complete e tempo estimado"
+     },
+     {
+      "id": "s-tempdb-sessao",
+      "texto": "Quem está usando o TempDB — consumo por sessão e por query"
+     },
+     {
+      "id": "s-transacoes-abertas",
+      "texto": "Transações abertas há muito tempo — o esquecido do BEGIN TRAN"
+     },
+     {
+      "id": "s-top-queries",
+      "texto": "Top 20 queries — por CPU, leituras, duração e execuções (plan cache)"
+     },
+     {
+      "id": "s-top-waits",
+      "texto": "Top waits desde o restart — já filtrando as esperas benignas"
+     },
+     {
+      "id": "s-waits-intervalo",
+      "texto": "Waits num intervalo — foto, espera 60 segundos, foto de novo e diferença"
+     },
+     {
+      "id": "s-waits-agora",
+      "texto": "Waits acontecendo agora, por sessão, com a query (dm_os_waiting_tasks)"
+     },
+     {
+      "id": "s-tempdb-contencao",
+      "texto": "Contenção de alocação no TempDB — quem está esperando PFS, GAM e SGAM"
+     },
+     {
+      "id": "s-io-latencia",
+      "texto": "Latência de I/O por arquivo — leitura e escrita em ms"
+     },
+     {
+      "id": "s-memoria-banco",
+      "texto": "Memória do buffer pool por banco e por tabela"
+     },
+     {
+      "id": "s-implicit",
+      "texto": "Achar conversões implícitas no plan cache"
+     },
+     {
+      "id": "s-plano-proc",
+      "texto": "Pegar o plano em cache de uma procedure específica"
+     },
+     {
+      "id": "s-qs-regressao",
+      "texto": "Query Store — queries que regrediram e planos forçados"
+     },
+     {
+      "id": "s-deadlocks",
+      "texto": "Últimos deadlocks do system_health — com o XML do grafo"
+     },
+     {
+      "id": "s-fragmentacao",
+      "texto": "Fragmentação de índices — com o comando de REBUILD/REORGANIZE gerado"
+     },
+     {
+      "id": "s-idx-nao-usados",
+      "texto": "Índices não usados — só custam escrita"
+     },
+     {
+      "id": "s-idx-duplicados",
+      "texto": "Índices duplicados e sobrepostos"
+     },
+     {
+      "id": "s-missing-idx",
+      "texto": "Missing indexes com score de impacto — e o CREATE INDEX pronto (revisar antes!)"
+     },
+     {
+      "id": "s-stats-velhas",
+      "texto": "Estatísticas desatualizadas — modification_counter e última atualização"
+     },
+     {
+      "id": "s-heaps",
+      "texto": "Tabelas sem PK e heaps"
+     },
+     {
+      "id": "s-fk-sem-idx",
+      "texto": "FKs sem índice"
+     },
+     {
+      "id": "s-untrusted",
+      "texto": "Constraints não confiáveis — e o script para torná-las confiáveis"
+     },
+     {
+      "id": "s-tamanho-tabelas",
+      "texto": "Tamanho de todas as tabelas — linhas, reservado, dados e índices"
+     },
+     {
+      "id": "s-contar-linhas",
+      "texto": "Contar linhas de todas as tabelas em segundos (sys.partitions)"
+     },
+     {
+      "id": "s-espaco-arquivos",
+      "texto": "Espaço usado e livre por arquivo em todos os bancos"
+     },
+     {
+      "id": "s-log-uso",
+      "texto": "Uso do log e log_reuse_wait_desc de todos os bancos"
+     },
+     {
+      "id": "s-vlf-count",
+      "texto": "Quantidade de VLFs por banco"
+     },
+     {
+      "id": "s-autogrowth",
+      "texto": "Autogrowths recentes pelo default trace"
+     },
+     {
+      "id": "s-disco",
+      "texto": "Espaço livre nos discos vistos pelo SQL Server (dm_os_volume_stats)"
+     },
+     {
+      "id": "s-ultimo-backup",
+      "texto": "Último backup de cada banco — full, diff e log — e quem está sem backup"
+     },
+     {
+      "id": "s-backup-historico",
+      "texto": "Histórico de backup — tamanho, duração e local de cada arquivo"
+     },
+     {
+      "id": "s-gerar-restore",
+      "texto": "Gerar a sequência de RESTORE a partir do histórico do msdb"
+     },
+     {
+      "id": "s-checkdb-ultimo",
+      "texto": "Último DBCC CHECKDB bem-sucedido de cada banco"
+     },
+     {
+      "id": "s-jobs-falhas",
+      "texto": "Jobs que falharam nas últimas 24 horas"
+     },
+     {
+      "id": "s-jobs-rodando",
+      "texto": "Jobs rodando agora — e há quanto tempo"
+     },
+     {
+      "id": "s-jobs-inventario",
+      "texto": "Inventário de jobs — schedules, owner, próxima execução"
+     },
+     {
+      "id": "s-sysadmins",
+      "texto": "Quem é sysadmin na instância"
+     },
+     {
+      "id": "s-permissoes",
+      "texto": "Todas as permissões de um usuário — e o script para recriá-las"
+     },
+     {
+      "id": "s-orfaos",
+      "texto": "Usuários órfãos em todos os bancos — e a correção"
+     },
+     {
+      "id": "s-logins-falhos",
+      "texto": "Tentativas de login com falha no error log"
+     },
+     {
+      "id": "s-busca-codigo",
+      "texto": "Procurar texto em procedures, views, functions e triggers"
+     },
+     {
+      "id": "s-busca-coluna",
+      "texto": "Procurar coluna pelo nome em todas as tabelas"
+     },
+     {
+      "id": "s-dependencias",
+      "texto": "Dependências de um objeto — quem usa e quem é usado"
+     },
+     {
+      "id": "s-quem-alterou",
+      "texto": "Quem alterou ou apagou um objeto — default trace"
+     },
+     {
+      "id": "s-dicionario",
+      "texto": "Gerar dicionário de dados — tabelas, colunas, tipos e descrições"
+     },
+     {
+      "id": "s-delete-lotes",
+      "texto": "DELETE e UPDATE em lotes — sem travar e sem estourar o log"
+     },
+     {
+      "id": "s-duplicados",
+      "texto": "Encontrar e remover duplicados mantendo um registro"
+     },
+     {
+      "id": "s-comparar-tabelas",
+      "texto": "Comparar duas tabelas — o que tem em uma e não tem na outra"
+     },
+     {
+      "id": "s-calendario",
+      "texto": "Gerar tabela calendário — com feriados nacionais"
+     },
+     {
+      "id": "s-numeros",
+      "texto": "Gerar tabela de números (tally)"
+     },
+     {
+      "id": "s-ag-status",
+      "texto": "Saúde dos Availability Groups — sincronização, filas e latência"
+     },
+     {
+      "id": "s-repl-latencia",
+      "texto": "Latência da replicação e comandos pendentes"
+     },
+     {
+      "id": "s-cdc-status",
+      "texto": "Status do CDC — tabelas habilitadas, capture job e latência"
+     },
+     {
+      "id": "s-errorlog",
+      "texto": "Ler o error log filtrando por palavra e período (xp_readerrorlog)"
+     }
+    ]
+   }
+  ]
+ }
+]

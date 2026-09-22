@@ -1,41 +1,50 @@
 ---
 title: "SQL with Jean"
+layout: hextra-home
 toc: false
 ---
 
-<div style="text-align:center; padding: 3rem 0 2.5rem;">
-  <p style="font-size:1.15rem; color:#6b7280; max-width:620px; margin:0 auto 2rem; line-height:1.7;">
-    Aqui compartilho conhecimento sobre SQL — scripts prontos, explicações diretas, planos de execução reais e comparações que mostram <em>por que</em> as coisas funcionam do jeito que funcionam.
-    <br><br>
-    Sinta-se em casa. Se precisar de ajuda, é só chamar.
-  </p>
+<div class="hx:mt-6 hx-mt-6 hx:mb-6 hx-mb-6">
+{{< hextra/hero-headline >}}
+  SQL Server do zero&nbsp;<br class="sm:hx-block hx-hidden" />ao plano de execução
+{{< /hextra/hero-headline >}}
 </div>
 
----
+<div class="hx:mb-12 hx-mb-12">
+{{< hextra/hero-subtitle >}}
+  Aqui eu posto de tudo sobre banco de dados, do que é uma tabela até como ler um plano de execução. Sem enrolação e com script pronto pra rodar. Travou em alguma coisa? É só chamar.
+{{< /hextra/hero-subtitle >}}
+</div>
 
-## Como o blog funciona
+<div class="hx:mb-16 hx-mb-16" style="display:flex;gap:.75rem;flex-wrap:wrap">
+{{< hextra/hero-button text="Comece pelo primeiro post" link="fundamentos/por-onde-comecar/o-que-e-um-banco-de-dados/" >}}
+{{< hextra/hero-button text="Ver o mapa completo" link="mapa/" style="background:transparent;color:inherit;border:1px solid rgba(127,127,127,.4)" >}}
+</div>
 
-{{< cards >}}
-  {{< card link="teoria" title="Teoria" subtitle="O que é, para que serve, quando e por que usar. Cada post explica um conceito do zero, sem enrolação." icon="book-open" >}}
-  {{< card link="pratica" title="Prática" subtitle="O conceito em ação: scripts comentados, planos de execução, comparações lado a lado. Cada post de prática tem um de teoria correspondente." icon="code" >}}
-{{< /cards >}}
+<h2 style="font-size:1.6rem;font-weight:700;letter-spacing:-.01em;margin:3.5rem 0 .4rem">As trilhas</h2>
+<p style="opacity:.75;margin:0 0 1.25rem">Oito caminhos, do mais básico ao mais avançado. Cada post explica o conceito e termina com prática.</p>
 
----
+{{< hextra/feature-grid cols="4" >}}
+  {{< hextra/feature-card title="1 · Fundamentos" subtitle="Do zero ao primeiro SELECT com confiança." link="fundamentos/" >}}
+  {{< hextra/feature-card title="2 · SQL Intermediário" subtitle="JOINs, CTEs, window functions, T-SQL e transações." link="intermediario/" >}}
+  {{< hextra/feature-card title="3 · Performance" subtitle="Índices, planos, locks e waits: como o motor funciona." link="performance/" >}}
+  {{< hextra/feature-card title="4 · Recursos Avançados" subtitle="Particionamento, temporal, JSON, XML e DW." link="avancado/" >}}
+  {{< hextra/feature-card title="5 · Administração" subtitle="Instalar, proteger, fazer backup, manter e monitorar." link="administracao/" >}}
+  {{< hextra/feature-card title="6 · Arquitetura e Escala" subtitle="HA/DR, replicação, CDC, DevOps, nuvem e IA." link="arquitetura/" >}}
+  {{< hextra/feature-card title="7 · Referência" subtitle="Cada sp_, DBCC, @@função e DMV explicado." link="referencia/" >}}
+  {{< hextra/feature-card title="8 · Scripts Úteis" subtitle="O kit de sobrevivência para o dia a dia." link="scripts/" >}}
+{{< /hextra/feature-grid >}}
 
-## Exemplo de como os posts se conectam
+<h2 style="font-size:1.6rem;font-weight:700;letter-spacing:-.01em;margin:3.5rem 0 .4rem">Tá com problema agora?</h2>
+<p style="opacity:.75;margin:0 0 1.25rem">Atalhos para quando o banco já está pegando fogo.</p>
 
-Digamos que você queira entender **Primary Key**:
+{{< hextra/feature-grid cols="4" >}}
+  {{< hextra/feature-card title="O banco está lento" subtitle="Por onde começar a investigar." link="performance/" >}}
+  {{< hextra/feature-card title="Tem gente travando todo mundo" subtitle="Achar o bloqueio e resolver." link="performance/" >}}
+  {{< hextra/feature-card title="O log encheu" subtitle="Erro 9002 e o log que não para de crescer." link="administracao/" >}}
+  {{< hextra/feature-card title="Preciso de um script pronto" subtitle="Copiar, colar e rodar." link="scripts/" >}}
+{{< /hextra/feature-grid >}}
 
-1. **Teoria → Primary Key** — o que é uma PK, por que ela existe, o que o banco faz internamente quando você cria uma.
-2. **Prática → Primary Key** — cria a tabela, insere dados, roda uma query filtrada pela PK, mostra o plano de execução. Depois remove a PK e roda de novo. Vê a diferença. Entende o impacto de verdade.
+<h2 style="font-size:1.6rem;font-weight:700;letter-spacing:-.01em;margin:3.5rem 0 .4rem">Últimos posts</h2>
 
-Cada par teoria + prática é independente — você pode começar por qualquer um.
-
----
-
-## Outros recursos
-
-{{< cards >}}
-  {{< card link="downloads" title="Downloads" subtitle="Todos os scripts do blog em um só lugar, organizados por tema. Copie, adapte, use." icon="download" >}}
-  {{< card link="contato" title="Fala comigo" subtitle="Dúvida, sugestão, pedido de post ou só quer trocar uma ideia sobre SQL e bancos de dados." icon="mail" >}}
-{{< /cards >}}
+{{< ultimos-posts n="5" >}}

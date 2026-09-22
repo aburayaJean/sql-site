@@ -1,0 +1,11 @@
+{{- /* Lista os N posts publicados mais recentes. Uso: {{< ultimos-posts n="5" >}} */ -}}
+{{- $n := int (.Get "n" | default 5) -}}
+{{- $posts := where site.RegularPages "Params.roadmap" "!=" nil -}}
+<ul class="not-prose" style="list-style:none;padding:0;margin:1rem 0;display:flex;flex-direction:column">
+{{- range first $n $posts.ByDate.Reverse }}
+  <li style="display:flex;justify-content:space-between;gap:1rem;padding:.65rem 0;border-bottom:1px solid rgba(127,127,127,.2)">
+    <a href="{{ .RelPermalink }}" style="font-weight:500">{{ .Title }}</a>
+    <span style="opacity:.6;white-space:nowrap;font-size:.875rem">{{ .Date | time.Format "02/01/2006" }}</span>
+  </li>
+{{- end }}
+</ul>
