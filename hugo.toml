@@ -26,11 +26,11 @@ defaultContentLanguageInSubdir = false
 
 [[params.socialIcons]]
   name = "github"
-  url = "https://github.com/SEU_USUARIO"
+  url = "https://github.com/aburayajean"
 
 [[params.socialIcons]]
   name = "linkedin"
-  url = "https://linkedin.com/in/SEU_PERFIL"
+  url = "https://linkedin.com/in/aburayaJean"
 
 [languages]
   [languages.pt]
