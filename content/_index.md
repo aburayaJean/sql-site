@@ -24,16 +24,7 @@ toc: false
 <h2 style="font-size:1.6rem;font-weight:700;letter-spacing:-.01em;margin:3.5rem 0 .4rem">As trilhas</h2>
 <p style="opacity:.75;margin:0 0 1.25rem">Oito caminhos, do mais básico ao mais avançado. Cada post explica o conceito e termina com prática.</p>
 
-{{< hextra/feature-grid cols="4" >}}
-  {{< hextra/feature-card title="1 · Fundamentos" subtitle="Do zero ao primeiro SELECT com confiança." link="fundamentos/" >}}
-  {{< hextra/feature-card title="2 · SQL Intermediário" subtitle="JOINs, CTEs, window functions, T-SQL e transações." link="intermediario/" >}}
-  {{< hextra/feature-card title="3 · Performance" subtitle="Índices, planos, locks e waits: como o motor funciona." link="performance/" >}}
-  {{< hextra/feature-card title="4 · Recursos Avançados" subtitle="Particionamento, temporal, JSON, XML e DW." link="avancado/" >}}
-  {{< hextra/feature-card title="5 · Administração" subtitle="Instalar, proteger, fazer backup, manter e monitorar." link="administracao/" >}}
-  {{< hextra/feature-card title="6 · Arquitetura e Escala" subtitle="HA/DR, replicação, CDC, DevOps, nuvem e IA." link="arquitetura/" >}}
-  {{< hextra/feature-card title="7 · Referência" subtitle="Cada sp_, DBCC, @@função e DMV explicado." link="referencia/" >}}
-  {{< hextra/feature-card title="8 · Scripts Úteis" subtitle="O kit de sobrevivência para o dia a dia." link="scripts/" >}}
-{{< /hextra/feature-grid >}}
+{{< trilhas >}}
 
 <h2 style="font-size:1.6rem;font-weight:700;letter-spacing:-.01em;margin:3.5rem 0 .4rem">Tá com problema agora?</h2>
 <p style="opacity:.75;margin:0 0 1.25rem">Atalhos para quando o banco já está pegando fogo.</p>
