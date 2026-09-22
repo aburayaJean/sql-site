@@ -32,13 +32,13 @@ Todos seguem o modelo relacional e falam SQL. O que muda é licença, ecossistem
 | | Licença | Onde costuma brilhar |
 |---|---|---|
 | **SQL Server** | Comercial (com edições gratuitas: Developer e Express) | Empresas no ecossistema Microsoft (.NET, Azure, Power BI), ferramentas de administração maduras |
-| **PostgreSQL** | Open source | Extensibilidade, aderência ao padrão SQL, muito usado em startups e na nuvem |
+| **PostgreSQL** | Open source | Extensibilidade, aderência ao padrão SQL, muito usado em startups, nuvem, administração pública, com uma comunidade extremamente ativa e claro, open source |
 | **MySQL** | Open source (mantido pela Oracle) | Aplicações web, muito popular com PHP e WordPress |
 | **Oracle** | Comercial | Grandes corporações, bancos e governo, cargas enormes |
 
 O SQL Server é o banco relacional da Microsoft. Nasceu em 1989 de uma parceria com a Sybase e, desde 2017, roda também em Linux e em containers. Além de tabelas, ele trabalha com JSON (com tipo nativo a partir do 2025), grafos, dados geográficos e vetores para IA, e cada um desses recursos tem trilha própria aqui no blog.
 
-Por que este blog é focado em SQL Server? Porque é onde eu trabalho há quase 20 anos e é o que eu conheço de verdade. Mas quase tudo dos Fundamentos vale para qualquer banco relacional, e quando algo for específico do SQL Server eu aviso.
+Por que este blog é focado em SQL Server? Porque é onde eu trabalho há quase 20 anos, o que eu mais gosto de mexer e o que eu mais conheço. Mas quase tudo dos Fundamentos vale para qualquer banco relacional, e quando algo for específico do SQL Server eu aviso.
 
 ## Bora pra prática
 
