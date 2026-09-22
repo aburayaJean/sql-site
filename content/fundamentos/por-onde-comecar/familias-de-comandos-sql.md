@@ -148,3 +148,12 @@ DROP TABLE dbo.Fornecedores;   -- DDL: some a tabela inteira
 
 Pronto: você acabou de usar as cinco famílias de comandos SQL.
 
+## Documentação oficial
+
+Quer ir mais fundo? Estes são os artigos oficiais da Microsoft sobre o que a gente viu aqui. Estão em português; se alguma tradução parecer estranha, dá para trocar para o original em inglês no próprio site.
+
+- [Instruções Transact-SQL: DDL, DML, permissões e mais](https://learn.microsoft.com/pt-br/sql/t-sql/statements/statements)
+- [CREATE TABLE](https://learn.microsoft.com/pt-br/sql/t-sql/statements/create-table-transact-sql), [ALTER TABLE](https://learn.microsoft.com/pt-br/sql/t-sql/statements/alter-table-transact-sql) e [TRUNCATE TABLE](https://learn.microsoft.com/pt-br/sql/t-sql/statements/truncate-table-transact-sql)
+- [INSERT](https://learn.microsoft.com/pt-br/sql/t-sql/statements/insert-transact-sql), [UPDATE](https://learn.microsoft.com/pt-br/sql/t-sql/queries/update-transact-sql) e [DELETE](https://learn.microsoft.com/pt-br/sql/t-sql/statements/delete-transact-sql)
+- [CREATE USER](https://learn.microsoft.com/pt-br/sql/t-sql/statements/create-user-transact-sql), [GRANT](https://learn.microsoft.com/pt-br/sql/t-sql/statements/grant-transact-sql), [EXECUTE AS](https://learn.microsoft.com/pt-br/sql/t-sql/statements/execute-as-transact-sql) e [REVERT](https://learn.microsoft.com/pt-br/sql/t-sql/statements/revert-transact-sql)
+- [BEGIN TRANSACTION](https://learn.microsoft.com/pt-br/sql/t-sql/language-elements/begin-transaction-transact-sql) e [ROLLBACK TRANSACTION](https://learn.microsoft.com/pt-br/sql/t-sql/language-elements/rollback-transaction-transact-sql)

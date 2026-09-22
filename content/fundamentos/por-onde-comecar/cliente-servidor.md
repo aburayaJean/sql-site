@@ -113,3 +113,12 @@ GO 3
 
 Três mensagens na aba Messages. Útil para gerar dados de teste rapidinho.
 
+## Documentação oficial
+
+Quer ir mais fundo? Estes são os artigos oficiais da Microsoft sobre o que a gente viu aqui. Estão em português; se alguma tradução parecer estranha, dá para trocar para o original em inglês no próprio site.
+
+- [TDS 8.0 (como funciona o protocolo TDS)](https://learn.microsoft.com/pt-br/sql/relational-databases/security/networking/tds-8)
+- [sys.dm_exec_sessions](https://learn.microsoft.com/pt-br/sql/relational-databases/system-dynamic-management-objects/sys-dm-exec-sessions-transact-sql) e [sys.dm_exec_connections](https://learn.microsoft.com/pt-br/sql/relational-databases/system-dynamic-management-objects/sys-dm-exec-connections-transact-sql)
+- [@@SPID](https://learn.microsoft.com/pt-br/sql/t-sql/functions/spid-transact-sql)
+- [GO](https://learn.microsoft.com/pt-br/sql/t-sql/language-elements/sql-server-utilities-statements-go)
+- [Pool de conexões](https://learn.microsoft.com/pt-br/sql/connect/ado-net/connection-pooling)

@@ -95,7 +95,7 @@ Tem dois caminhos fáceis. Os dois são gratuitos e cada um vai ganhar um post d
 docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=Senha@Forte2026" -p 1433:1433 --name sqlserver -d mcr.microsoft.com/mssql/server:2025-latest
 ```
 
-A senha precisa ter pelo menos 8 caracteres, com maiúscula, minúscula, número e símbolo. Se não tiver, o container sobe e morre em seguida. No Mac com chip Apple, deixe ligada a emulação Rosetta nas configurações do Docker Desktop.
+A senha precisa ter pelo menos 8 caracteres, com maiúscula, minúscula, número e símbolo. Se não tiver, o container sobe e morre em seguida. No Mac com chip Apple, a imagem roda com a emulação Rosetta ligada no Docker Desktop. Funciona bem para estudar, mas a própria Microsoft avisa que esse cenário não é testado nem tem suporte oficial.
 
 Para conectar, instale o **SSMS** (SQL Server Management Studio), no Windows, ou o **VS Code com a extensão MSSQL**, em qualquer sistema. No Docker, conecte em `localhost,1433` com o usuário `sa` e a senha que você definiu, marcando a opção **Trust server certificate**.
 
@@ -119,3 +119,14 @@ Ele cria o banco **Loja** com as tabelas `Clientes`, `Produtos`, `Pedidos` e `It
 
 No fim da execução aparece uma conferência com a quantidade de linhas de cada tabela: 8 clientes, 8 produtos, 12 pedidos e 18 itens.
 
+## Documentação oficial
+
+Quer ir mais fundo? Estes são os artigos oficiais da Microsoft sobre o que a gente viu aqui. Estão em português; se alguma tradução parecer estranha, dá para trocar para o original em inglês no próprio site.
+
+- [O que é o SQL Server?](https://learn.microsoft.com/pt-br/sql/sql-server/what-is-sql-server)
+- [Edições e recursos com suporte do SQL Server 2025](https://learn.microsoft.com/pt-br/sql/sql-server/editions-and-components-of-sql-server-2025)
+- [Instalar o SQL Server pelo Assistente de Instalação](https://learn.microsoft.com/pt-br/sql/database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup)
+- [Início rápido: executar o SQL Server em contêiner com Docker](https://learn.microsoft.com/pt-br/sql/linux/install-upgrade/quickstart-install-docker)
+- [Instalar o SQL Server Management Studio (SSMS)](https://learn.microsoft.com/pt-br/ssms/install/install)
+- [Extensão MSSQL para Visual Studio Code](https://learn.microsoft.com/pt-br/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code)
+- [@@VERSION](https://learn.microsoft.com/pt-br/sql/t-sql/functions/version-transact-sql-configuration-functions)

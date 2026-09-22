@@ -104,3 +104,13 @@ WHERE  ClienteId = 1;
 Erro 547 de novo, agora com o `DELETE`. Se o banco deixasse, os pedidos dela ficariam apontando para ninguém.
 
 Na planilha do post anterior, nada disso seria impedido. Essa é a diferença entre guardar dados e **proteger** dados, e é o coração do modelo relacional.
+
+## Documentação oficial
+
+Quer ir mais fundo? Estes são os artigos oficiais da Microsoft sobre o que a gente viu aqui. Estão em português; se alguma tradução parecer estranha, dá para trocar para o original em inglês no próprio site.
+
+- [Restrições de chave primária e estrangeira](https://learn.microsoft.com/pt-br/sql/relational-databases/tables/primary-and-foreign-key-constraints)
+- [Criar relações de chave estrangeira](https://learn.microsoft.com/pt-br/sql/relational-databases/tables/create-foreign-key-relationships)
+- [sys.foreign_keys](https://learn.microsoft.com/pt-br/sql/relational-databases/system-catalog-views/sys-foreign-keys-transact-sql)
+- [Cláusula FROM, com JOIN](https://learn.microsoft.com/pt-br/sql/t-sql/queries/from-transact-sql)
+- [Edições e recursos com suporte do SQL Server 2025](https://learn.microsoft.com/pt-br/sql/sql-server/editions-and-components-of-sql-server-2025)

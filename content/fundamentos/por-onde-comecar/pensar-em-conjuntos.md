@@ -159,3 +159,13 @@ Não é pouca coisa. Com essa base, todo o resto vai fazer muito mais sentido.
 ---
 
 **Próxima parada:** Ambiente e Ferramentas, onde a gente monta o seu ambiente com calma e aprende a tirar o máximo do SSMS.
+
+## Documentação oficial
+
+Quer ir mais fundo? Estes são os artigos oficiais da Microsoft sobre o que a gente viu aqui. Estão em português; se alguma tradução parecer estranha, dá para trocar para o original em inglês no próprio site.
+
+- [UPDATE](https://learn.microsoft.com/pt-br/sql/t-sql/queries/update-transact-sql) e [WHILE](https://learn.microsoft.com/pt-br/sql/t-sql/language-elements/while-transact-sql)
+- [ROW_NUMBER](https://learn.microsoft.com/pt-br/sql/t-sql/functions/row-number-transact-sql)
+- [SET NOCOUNT](https://learn.microsoft.com/pt-br/sql/t-sql/statements/set-nocount-transact-sql)
+- [Arquitetura do log de transações (write-ahead logging)](https://learn.microsoft.com/pt-br/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide)
+- [DROP TABLE](https://learn.microsoft.com/pt-br/sql/t-sql/statements/drop-table-transact-sql)

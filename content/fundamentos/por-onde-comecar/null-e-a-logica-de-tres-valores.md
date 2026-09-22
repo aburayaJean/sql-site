@@ -178,3 +178,13 @@ ORDER BY UF;
 
 A primeira linha é `NULL` com 1 cliente, a Fernanda: os NULLs formam um grupo e aparecem primeiro na ordenação.
 
+## Documentação oficial
+
+Quer ir mais fundo? Estes são os artigos oficiais da Microsoft sobre o que a gente viu aqui. Estão em português; se alguma tradução parecer estranha, dá para trocar para o original em inglês no próprio site.
+
+- [NULL e UNKNOWN](https://learn.microsoft.com/pt-br/sql/t-sql/language-elements/null-and-unknown-transact-sql)
+- [IS [NOT] NULL](https://learn.microsoft.com/pt-br/sql/t-sql/queries/is-null-transact-sql) e [IS [NOT] DISTINCT FROM](https://learn.microsoft.com/pt-br/sql/t-sql/queries/is-distinct-from-transact-sql)
+- [SET ANSI_NULLS](https://learn.microsoft.com/pt-br/sql/t-sql/statements/set-ansi-nulls-transact-sql)
+- [COUNT](https://learn.microsoft.com/pt-br/sql/t-sql/functions/count-transact-sql) e [AVG](https://learn.microsoft.com/pt-br/sql/t-sql/functions/avg-transact-sql)
+- [CONCAT](https://learn.microsoft.com/pt-br/sql/t-sql/functions/concat-transact-sql)
+- [Restrições UNIQUE e CHECK](https://learn.microsoft.com/pt-br/sql/relational-databases/tables/unique-constraints-and-check-constraints)

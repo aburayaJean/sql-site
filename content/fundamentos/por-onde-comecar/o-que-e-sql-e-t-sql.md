@@ -108,3 +108,13 @@ Olha a aba **Messages** do SSMS: vai aparecer "Catálogo razoável: 8 produtos."
 Reparou no `N` antes dos textos, como em `N'sem e-mail'`? Ele diz ao SQL Server que o texto é Unicode (`NVARCHAR`), o que evita problemas com acentos e com conversões de tipo. O post sobre tipos de texto explica isso direitinho.
 {{< /callout >}}
 
+## Documentação oficial
+
+Quer ir mais fundo? Estes são os artigos oficiais da Microsoft sobre o que a gente viu aqui. Estão em português; se alguma tradução parecer estranha, dá para trocar para o original em inglês no próprio site.
+
+- [Referência do Transact-SQL](https://learn.microsoft.com/pt-br/sql/t-sql/language-reference)
+- [TOP](https://learn.microsoft.com/pt-br/sql/t-sql/queries/top-transact-sql) e [ORDER BY, com OFFSET e FETCH](https://learn.microsoft.com/pt-br/sql/t-sql/queries/select-order-by-clause-transact-sql)
+- [GETDATE](https://learn.microsoft.com/pt-br/sql/t-sql/functions/getdate-transact-sql)
+- [ISNULL](https://learn.microsoft.com/pt-br/sql/t-sql/functions/isnull-transact-sql) e [COALESCE](https://learn.microsoft.com/pt-br/sql/t-sql/language-elements/coalesce-transact-sql)
+- [DECLARE @variável](https://learn.microsoft.com/pt-br/sql/t-sql/language-elements/declare-local-variable-transact-sql), [IF...ELSE](https://learn.microsoft.com/pt-br/sql/t-sql/language-elements/if-else-transact-sql) e [PRINT](https://learn.microsoft.com/pt-br/sql/t-sql/language-elements/print-transact-sql)
+- [Tipos nchar e nvarchar](https://learn.microsoft.com/pt-br/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)

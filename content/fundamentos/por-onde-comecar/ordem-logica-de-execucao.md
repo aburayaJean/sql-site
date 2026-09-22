@@ -173,3 +173,11 @@ Na etapa 7, qual dos empatados entra? Não dá para saber: quando há empate no 
 
 </details>
 
+## Documentação oficial
+
+Quer ir mais fundo? Estes são os artigos oficiais da Microsoft sobre o que a gente viu aqui. Estão em português; se alguma tradução parecer estranha, dá para trocar para o original em inglês no próprio site.
+
+- [SELECT, incluindo a ordem lógica de processamento](https://learn.microsoft.com/pt-br/sql/t-sql/queries/select-transact-sql)
+- [GROUP BY](https://learn.microsoft.com/pt-br/sql/t-sql/queries/select-group-by-transact-sql) e [HAVING](https://learn.microsoft.com/pt-br/sql/t-sql/queries/select-having-transact-sql)
+- [ORDER BY](https://learn.microsoft.com/pt-br/sql/t-sql/queries/select-order-by-clause-transact-sql)
+- [WITH (expressão de tabela comum, a CTE)](https://learn.microsoft.com/pt-br/sql/t-sql/queries/with-common-table-expression-transact-sql)

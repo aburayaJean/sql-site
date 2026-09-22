@@ -141,3 +141,13 @@ DROP TABLE financeiro.Pagamentos;
 DROP SCHEMA financeiro;
 ```
 
+## Documentação oficial
+
+Quer ir mais fundo? Estes são os artigos oficiais da Microsoft sobre o que a gente viu aqui. Estão em português; se alguma tradução parecer estranha, dá para trocar para o original em inglês no próprio site.
+
+- [Instâncias do Mecanismo de Banco de Dados](https://learn.microsoft.com/pt-br/sql/database-engine/configure-windows/database-engine-instances-sql-server)
+- [Bancos de dados do sistema](https://learn.microsoft.com/pt-br/sql/relational-databases/databases/system-databases)
+- [Convenções de sintaxe do Transact-SQL (inclui os nomes de várias partes)](https://learn.microsoft.com/pt-br/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)
+- [CREATE SCHEMA](https://learn.microsoft.com/pt-br/sql/t-sql/statements/create-schema-transact-sql)
+- [sys.databases](https://learn.microsoft.com/pt-br/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)
+- [@@SERVERNAME](https://learn.microsoft.com/pt-br/sql/t-sql/functions/servername-transact-sql) e [@@SERVICENAME](https://learn.microsoft.com/pt-br/sql/t-sql/functions/servicename-transact-sql)
