@@ -1,0 +1,61 @@
+baseURL = "https://aburayaJean.github.io/sql-blog/"
+languageCode = "pt-br"
+title = "SQL with Jean"
+theme = "PaperMod"
+defaultContentLanguage = "pt"
+defaultContentLanguageInSubdir = false
+
+[params]
+  env = "production"
+  title = "SQL with Jean"
+  description = "Dicas, scripts e tutoriais de SQL Server e bancos de dados"
+  author = "Jean Aburaya"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+
+[params.homeInfoParams]
+  Title = "SQL with Jean"
+  Content = "Dicas práticas de SQL Server, scripts prontos para usar e tutoriais de banco de dados. Para DBAs e desenvolvedores que querem escrever SQL melhor."
+
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/SEU_USUARIO"
+
+[[params.socialIcons]]
+  name = "linkedin"
+  url = "https://linkedin.com/in/SEU_PERFIL"
+
+[languages]
+  [languages.pt]
+    languageName = "Português"
+    weight = 1
+  [languages.en]
+    languageName = "English"
+    weight = 2
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 10
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 20
+  [[menu.main]]
+    identifier = "search"
+    name = "Buscar"
+    url = "/search/"
+    weight = 30
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]

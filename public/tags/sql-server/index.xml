@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Sql-Server on SQL with Jean</title>
+    <link>http://localhost:1313/sql-blog/tags/sql-server/</link>
+    <description>Recent content in Sql-Server on SQL with Jean</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/sql-blog/tags/sql-server/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Analisando Consumo de CPU no SQL Server</title>
+      <link>http://localhost:1313/sql-blog/posts/analisando-cpu-sql-server/</link>
+      <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/sql-blog/posts/analisando-cpu-sql-server/</guid>
+      <description>Como identificar quais queries estão consumindo mais CPU usando DMVs do SQL Server</description>
+    </item>
+  </channel>
+</rss>
