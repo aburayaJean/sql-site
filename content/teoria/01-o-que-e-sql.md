@@ -1,67 +1,71 @@
 ---
 title: "O que é SQL?"
-date: 2024-01-15
-weight: 1
-tags: ["fundamentos", "sql", "banco-de-dados"]
-categories: ["Fundamentos"]
-description: "O que é SQL, para que serve e como ele se encaixa no mundo dos bancos de dados relacionais."
+date: 2026-01-01
+weight: 10
+tags: ["iniciante", "conceito"]
+categories: ["Teoria"]
+description: "Entenda o que é SQL, sua história e por que ele é a linguagem universal dos bancos de dados relacionais."
 ---
 
-SQL (**Structured Query Language**) é a linguagem padrão para comunicação com bancos de dados relacionais. Com ela você cria estruturas, insere dados, consulta, atualiza e remove informações — tudo de forma declarativa: você diz *o quê* quer, não *como* buscar.
+SQL (*Structured Query Language*) é a linguagem padrão para **comunicar com bancos de dados relacionais**. Com ela você cria tabelas, insere dados, faz consultas e controla quem pode acessar o quê.
 
-## Banco de dados relacional: a ideia central
+## Um pouco de história
 
-Imagine uma planilha do Excel. Ela tem colunas (nome, idade, cidade) e linhas (cada registro é uma pessoa). Um banco de dados relacional funciona exatamente assim, mas com superpoderes:
+SQL nasceu na IBM em 1974, baseado no modelo relacional proposto por Edgar F. Codd. Em 1986 virou padrão ISO/ANSI — e desde então praticamente todo SGBD do mercado o suporta: PostgreSQL, SQL Server, MySQL, Oracle, SQLite, MariaDB…
 
-- Vários "abas" (chamadas **tabelas**) que se relacionam entre si
-- Garantias de consistência dos dados
-- Capacidade de processar milhões de registros rapidamente
-- Acesso simultâneo de múltiplos usuários sem conflito
+## O que dá para fazer com SQL?
 
-## Os principais SGBDs
+SQL se divide em quatro grandes grupos de comandos:
 
-SGBD significa **Sistema Gerenciador de Banco de Dados** — é o software que roda o banco. Os mais usados são:
-
-| SGBD | Uso principal | Licença |
+| Grupo | Sigla | Exemplos |
 |---|---|---|
-| SQL Server | Empresas Windows, .NET | Comercial / Express grátis |
-| PostgreSQL | Web, dados complexos | Open source |
-| MySQL / MariaDB | Web, WordPress, PHP | Open source |
-| Oracle | Grandes empresas | Comercial |
-| SQLite | Apps mobile, embarcado | Open source |
+| Consulta de dados | DQL | `SELECT` |
+| Manipulação de dados | DML | `INSERT`, `UPDATE`, `DELETE` |
+| Definição de estrutura | DDL | `CREATE`, `ALTER`, `DROP` |
+| Controle de acesso | DCL | `GRANT`, `REVOKE` |
 
-## Por que SQL ANSI?
+## Por que ANSI SQL?
 
-O SQL tem um padrão internacional — o **SQL ANSI/ISO** — que define uma sintaxe base que funciona em qualquer SGBD. Os posts aqui seguem esse padrão sempre que possível, com notas quando algo é específico de um banco.
+Neste blog usamos **ANSI SQL** (o padrão internacional) sempre que possível. Isso significa que os exemplos funcionam em qualquer SGBD com mínimas adaptações. Quando existe diferença relevante entre bancos, apontamos no próprio código.
 
-Isso significa que o código que você aprende aqui funciona no SQL Server, no PostgreSQL, no MySQL e nos demais com ajustes mínimos.
+## Modelo de dados que usamos
 
-## O que você vai aprender
+Todos os módulos práticos usam três tabelas simples:
 
-O SQL se divide em quatro grupos de comandos:
-
-**DDL** — *Data Definition Language*: cria e altera estruturas
 ```sql
-CREATE TABLE, ALTER TABLE, DROP TABLE
+-- Clientes do e-commerce
+CREATE TABLE clientes (
+    id    INTEGER      NOT NULL,
+    nome  VARCHAR(100) NOT NULL,
+    email VARCHAR(150),
+    cidade VARCHAR(80),
+    pais  VARCHAR(50)  NOT NULL DEFAULT 'Brasil',
+    CONSTRAINT pk_clientes PRIMARY KEY (id)
+);
+
+-- Produtos disponíveis
+CREATE TABLE produtos (
+    id        INTEGER       NOT NULL,
+    nome      VARCHAR(100)  NOT NULL,
+    categoria VARCHAR(50),
+    preco     DECIMAL(10,2) NOT NULL,
+    estoque   INTEGER       NOT NULL DEFAULT 0,
+    CONSTRAINT pk_produtos PRIMARY KEY (id)
+);
+
+-- Pedidos realizados
+CREATE TABLE pedidos (
+    id          INTEGER       NOT NULL,
+    id_cliente  INTEGER       NOT NULL,
+    data_pedido DATE          NOT NULL,
+    total       DECIMAL(10,2),
+    status      VARCHAR(20)   NOT NULL DEFAULT 'pendente',
+    CONSTRAINT pk_pedidos PRIMARY KEY (id)
+);
 ```
 
-**DML** — *Data Manipulation Language*: manipula os dados
-```sql
-SELECT, INSERT, UPDATE, DELETE
-```
-
-**DCL** — *Data Control Language*: controla permissões
-```sql
-GRANT, REVOKE
-```
-
-**TCL** — *Transaction Control Language*: controla transações
-```sql
-COMMIT, ROLLBACK, SAVEPOINT
-```
-
-O foco aqui é DDL e DML — o que você usa 90% do tempo.
+Execute o script do **Módulo 01** para criar e popular essas tabelas antes de qualquer exercício.
 
 ## Próximo passo
 
-Vá para a [prática](/pratica/01-ambiente-e-primeiros-passos/) e crie suas primeiras tabelas e consultas.
+Agora que você sabe o que é SQL e conhece nosso modelo de dados, vá para o [Módulo 02 — SELECT e WHERE](/teoria/02-select-e-where/) e faça sua primeira consulta.

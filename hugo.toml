@@ -1,44 +1,16 @@
-baseURL = "https://aburayaJean.github.io/sql-blog/"
-languageCode = "pt-br"
+baseURL = "https://aburayaJean.github.io/sql-site/"
+languageCode = "pt-BR"
 title = "SQL with Jean"
 theme = "PaperMod"
 defaultContentLanguage = "pt"
-defaultContentLanguageInSubdir = false
 
 [params]
-  env = "production"
-  title = "SQL with Jean"
-  description = "Dicas, scripts e tutoriais de SQL Server e bancos de dados"
-  author = "Jean Aburaya"
+  ShowCodeCopyButtons = true
   defaultTheme = "auto"
+  homeInfoParams = { Title = "SQL with Jean 🗄️", Content = "Aprenda SQL do básico ao avançado com exemplos práticos e scripts prontos para baixar." }
   ShowReadingTime = true
   ShowShareButtons = false
   ShowPostNavLinks = true
-  ShowBreadCrumbs = true
-  ShowCodeCopyButtons = true
-  ShowWordCount = true
-  ShowRssButtonInSectionTermList = true
-  UseHugoToc = true
-
-[params.homeInfoParams]
-  Title = "SQL with Jean"
-  Content = "Dicas práticas de SQL Server, scripts prontos para usar e tutoriais de banco de dados. Para DBAs e desenvolvedores que querem escrever SQL melhor."
-
-[[params.socialIcons]]
-  name = "github"
-  url = "https://github.com/aburayajean"
-
-[[params.socialIcons]]
-  name = "linkedin"
-  url = "https://linkedin.com/in/aburayaJean"
-
-[languages]
-  [languages.pt]
-    languageName = "Português"
-    weight = 1
-  [languages.en]
-    languageName = "English"
-    weight = 2
 
 [menu]
   [[menu.main]]
@@ -50,9 +22,10 @@ defaultContentLanguageInSubdir = false
     url = "/pratica/"
     weight = 20
   [[menu.main]]
+    name = "Downloads"
+    url = "/downloads/"
+    weight = 30
+  [[menu.main]]
     name = "Tags"
     url = "/tags/"
-    weight = 30
-
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
+    weight = 40
