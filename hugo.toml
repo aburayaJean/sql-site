@@ -55,10 +55,10 @@ enableGitInfo = true
     pageRef = "/scripts"
     weight = 30
 
-  [[menu.main]]
-    name = "Downloads"
-    pageRef = "/downloads"
-    weight = 40
+  #[[menu.main]]
+  #  name = "Downloads"
+  #  pageRef = "/downloads"
+  #  weight = 40
 
   [[menu.main]]
     name = "Contato"
