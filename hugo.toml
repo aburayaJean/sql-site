@@ -42,19 +42,16 @@ defaultContentLanguageInSubdir = false
 
 [menu]
   [[menu.main]]
-    identifier = "posts"
-    name = "Posts"
-    url = "/posts/"
+    name = "Teoria"
+    url = "/teoria/"
     weight = 10
   [[menu.main]]
-    identifier = "tags"
-    name = "Tags"
-    url = "/tags/"
+    name = "Prática"
+    url = "/pratica/"
     weight = 20
   [[menu.main]]
-    identifier = "search"
-    name = "Buscar"
-    url = "/search/"
+    name = "Tags"
+    url = "/tags/"
     weight = 30
 
 [outputs]
