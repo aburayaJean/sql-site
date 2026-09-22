@@ -152,7 +152,7 @@ DROP TABLE dbo.TesteConjuntos;
 
 ## Fim dos Fundamentos
 
-Se você chegou até aqui, já sabe o que é um banco de dados e um SGBD, entende a diferença entre relacional e NoSQL, sabe o que é SQL e T-SQL, conhece as famílias de comandos e a hierarquia do SQL Server, entende o caminho de uma query até o banco, a ordem lógica de execução, o NULL, e pensa em conjuntos.
+Se você chegou até aqui, já sabe o que é um banco de dados e um SGBD, entende o modelo relacional, sabe o que é SQL e T-SQL, conhece as famílias de comandos e a hierarquia do SQL Server, entende o caminho de uma query até o banco, a ordem lógica de execução, o NULL, e pensa em conjuntos.
 
 Não é pouca coisa. Com essa base, todo o resto vai fazer muito mais sentido.
 
