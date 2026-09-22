@@ -1,7 +1,7 @@
 ---
 title: "O que é um banco de dados (e por que sua planilha não dá conta)"
 description: "Do Excel ao banco: o problema que um banco de dados resolve, o que é um SGBD e como sair daqui com um SQL Server rodando."
-date: 2026-09-22T08:01:00-04:00
+date: 2026-01-05T08:00:00-04:00
 weight: 1
 roadmap: "oque-banco"
 tags: ["fundamentos", "iniciante"]
@@ -17,11 +17,11 @@ Uma loja pequena começa a vender e alguém cria uma planilha para controlar as 
 
 | Data       | Cliente          | Telefone        | Produto          | Preço    | Qtd |
 |------------|------------------|-----------------|------------------|----------|-----|
-| 05/01/2026 | Maria Silva      | (65) 99999-1111 | Notebook 15"     | 4.299,90 | 1   |
-| 05/01/2026 | Maria Silva      | (65) 99999-1111 | Mouse sem fio    | 89,90    | 1   |
-| 12/01/2026 | João Pereira     | (11) 98888-2222 | Teclado mecânico | 349,00   | 1   |
-| 02/02/2026 | Maria da Silva   | (65) 99999-3333 | Monitor 27"      | 1.599,00 | 2   |
-| 14/04/2026 | João Pereira     | (11) 98888-2222 | Notebook 15"     | 4.199,90 | 1   |
+| 05/01/2025 | Maria Silva      | (65) 99999-1111 | Notebook 15"     | 4.299,90 | 1   |
+| 05/01/2025 | Maria Silva      | (65) 99999-1111 | Mouse sem fio    | 89,90    | 1   |
+| 12/01/2025 | João Pereira     | (11) 98888-2222 | Teclado mecânico | 349,00   | 1   |
+| 02/02/2025 | Maria da Silva   | (65) 99999-3333 | Monitor 27"      | 1.599,00 | 2   |
+| 14/04/2025 | João Pereira     | (11) 98888-2222 | Notebook 15"     | 4.199,90 | 1   |
 
 Olha com calma e repara nos problemas:
 

@@ -1,7 +1,7 @@
 ---
 title: "A ordem em que o SQL Server lê a sua query (não é a ordem em que você escreve)"
 description: "FROM, WHERE, GROUP BY, HAVING, SELECT, ORDER BY: entenda a ordem lógica de processamento e por que o alias do SELECT não funciona no WHERE."
-date: 2026-09-22T08:07:00-04:00
+date: 2026-01-26T08:00:00-04:00
 weight: 7
 roadmap: "ordem-logica"
 tags: ["fundamentos", "iniciante", "select"]
@@ -152,7 +152,7 @@ SELECT   TOP (2)
          Status,
          COUNT(*) AS Quantidade
 FROM     dbo.Pedidos
-WHERE    DataPedido >= '2026-03-01'
+WHERE    DataPedido >= '2025-03-01'
 GROUP BY Status
 HAVING   COUNT(*) >= 2
 ORDER BY Quantidade DESC;
@@ -162,7 +162,7 @@ ORDER BY Quantidade DESC;
 <summary>Ver a ordem</summary>
 
 1. `FROM dbo.Pedidos`: todos os 12 pedidos.
-2. `WHERE DataPedido >= '2026-03-01'`: sobram 8 pedidos, de março em diante.
+2. `WHERE DataPedido >= '2025-03-01'`: sobram 8 pedidos, de março em diante.
 3. `GROUP BY Status`: Entregue (4), Enviado (2), Pendente (2).
 4. `HAVING COUNT(*) >= 2`: os três grupos passam.
 5. `SELECT`: calcula `Status` e `COUNT(*)`, e dá o apelido `Quantidade`.

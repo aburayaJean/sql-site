@@ -69,14 +69,14 @@ GO
 
 SET IDENTITY_INSERT dbo.Clientes ON;
 INSERT INTO dbo.Clientes (ClienteId, Nome, Email, Cidade, UF, DataCadastro) VALUES
-    (1, N'Maria Silva',     N'maria.silva@email.com',  N'Cuiabá',         'MT', '2025-01-10'),
-    (2, N'João Pereira',    N'joao.p@email.com',       N'São Paulo',      'SP', '2025-02-03'),
-    (3, N'Ana Costa',       NULL,                      N'Belo Horizonte', 'MG', '2025-02-20'),
-    (4, N'Carlos Souza',    N'carlos.souza@email.com', N'Várzea Grande',  'MT', '2025-03-15'),
-    (5, N'Fernanda Lima',   N'fe.lima@email.com',      NULL,              NULL, '2025-04-01'),
-    (6, N'Rafael Oliveira', NULL,                      N'Curitiba',       'PR', '2025-05-12'),
-    (7, N'Juliana Alves',   N'ju.alves@email.com',     N'Rio de Janeiro', 'RJ', '2025-06-08'),
-    (8, N'Pedro Santos',    N'pedro.santos@email.com', N'Cuiabá',         'MT', '2025-07-22');
+    (1, N'Maria Silva',     N'maria.silva@email.com',  N'Cuiabá',         'MT', '2024-01-10'),
+    (2, N'João Pereira',    N'joao.p@email.com',       N'São Paulo',      'SP', '2024-02-03'),
+    (3, N'Ana Costa',       NULL,                      N'Belo Horizonte', 'MG', '2024-02-20'),
+    (4, N'Carlos Souza',    N'carlos.souza@email.com', N'Várzea Grande',  'MT', '2024-03-15'),
+    (5, N'Fernanda Lima',   N'fe.lima@email.com',      NULL,              NULL, '2024-04-01'),
+    (6, N'Rafael Oliveira', NULL,                      N'Curitiba',       'PR', '2024-05-12'),
+    (7, N'Juliana Alves',   N'ju.alves@email.com',     N'Rio de Janeiro', 'RJ', '2024-06-08'),
+    (8, N'Pedro Santos',    N'pedro.santos@email.com', N'Cuiabá',         'MT', '2024-07-22');
 SET IDENTITY_INSERT dbo.Clientes OFF;
 
 SET IDENTITY_INSERT dbo.Produtos ON;
@@ -93,18 +93,18 @@ SET IDENTITY_INSERT dbo.Produtos OFF;
 
 SET IDENTITY_INSERT dbo.Pedidos ON;
 INSERT INTO dbo.Pedidos (PedidoId, ClienteId, DataPedido, Status, Desconto) VALUES
-    ( 1, 1, '2026-01-05', N'Entregue',  NULL),
-    ( 2, 2, '2026-01-12', N'Entregue',  50.00),
-    ( 3, 1, '2026-02-02', N'Entregue',  NULL),
-    ( 4, 3, '2026-02-18', N'Cancelado', NULL),
-    ( 5, 4, '2026-03-01', N'Entregue',  100.00),
-    ( 6, 5, '2026-03-09', N'Enviado',   NULL),
-    ( 7, 2, '2026-04-14', N'Entregue',  0.00),
-    ( 8, 6, '2026-05-20', N'Pendente',  NULL),
-    ( 9, 7, '2026-06-02', N'Entregue',  30.00),
-    (10, 1, '2026-06-25', N'Enviado',   NULL),
-    (11, 4, '2026-07-30', N'Pendente',  NULL),
-    (12, 7, '2026-08-11', N'Entregue',  NULL);
+    ( 1, 1, '2025-01-05', N'Entregue',  NULL),
+    ( 2, 2, '2025-01-12', N'Entregue',  50.00),
+    ( 3, 1, '2025-02-02', N'Entregue',  NULL),
+    ( 4, 3, '2025-02-18', N'Cancelado', NULL),
+    ( 5, 4, '2025-03-01', N'Entregue',  100.00),
+    ( 6, 5, '2025-03-09', N'Enviado',   NULL),
+    ( 7, 2, '2025-04-14', N'Entregue',  0.00),
+    ( 8, 6, '2025-05-20', N'Pendente',  NULL),
+    ( 9, 7, '2025-06-02', N'Entregue',  30.00),
+    (10, 1, '2025-06-25', N'Enviado',   NULL),
+    (11, 4, '2025-07-30', N'Pendente',  NULL),
+    (12, 7, '2025-08-11', N'Entregue',  NULL);
     -- O cliente 8 (Pedro) ainda não comprou nada — de propósito.
 SET IDENTITY_INSERT dbo.Pedidos OFF;
 

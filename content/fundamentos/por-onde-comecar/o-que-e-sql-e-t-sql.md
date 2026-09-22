@@ -1,7 +1,7 @@
 ---
 title: "O que é SQL — e o que é T-SQL"
 description: "A linguagem que conversa com o banco: de onde veio o SQL, por que ele é declarativo e o que o T-SQL do SQL Server acrescenta."
-date: 2026-09-22T08:03:00-04:00
+date: 2026-01-12T08:00:00-04:00
 weight: 3
 roadmap: "sql-intro"
 tags: ["fundamentos", "iniciante", "t-sql"]

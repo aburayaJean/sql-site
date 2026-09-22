@@ -1,7 +1,7 @@
 ---
 title: "Pense em conjuntos, não em linhas"
 description: "A virada de chave de quem vem da programação: por que um UPDATE resolve em milissegundos o que um loop leva segundos para fazer."
-date: 2026-09-22T08:09:00-04:00
+date: 2026-01-30T08:00:00-04:00
 weight: 9
 roadmap: "set-based"
 tags: ["fundamentos", "iniciante", "performance"]

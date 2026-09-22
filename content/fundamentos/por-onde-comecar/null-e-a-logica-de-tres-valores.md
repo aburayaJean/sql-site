@@ -1,7 +1,7 @@
 ---
 title: "NULL não é zero, não é vazio e não é igual a NULL"
 description: "O que NULL significa, a lógica de três valores (TRUE, FALSE, UNKNOWN) e as armadilhas que somem com linhas do seu resultado sem aviso."
-date: 2026-09-22T08:08:00-04:00
+date: 2026-01-28T08:00:00-04:00
 weight: 8
 roadmap: "null-logica"
 tags: ["fundamentos", "iniciante", "null"]

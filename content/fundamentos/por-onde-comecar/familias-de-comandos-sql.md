@@ -1,7 +1,7 @@
 ---
 title: "DDL, DML, DQL, DCL e TCL: as cinco famílias de comandos"
 description: "Todo comando SQL pertence a uma família: estrutura, dados, consulta, permissão ou transação. Entenda cada uma e rode um exemplo de todas."
-date: 2026-09-22T08:04:00-04:00
+date: 2026-01-15T08:00:00-04:00
 weight: 4
 roadmap: "sublinguagens"
 tags: ["fundamentos", "iniciante"]

@@ -1,7 +1,7 @@
 ---
 title: "O modelo relacional — e onde o SQL Server fica entre PostgreSQL, MySQL e Oracle"
 description: "Tabelas, chaves e relacionamentos: a ideia que sustenta o SQL Server, e como ele se compara com os outros bancos relacionais."
-date: 2026-09-22T08:02:00-04:00
+date: 2026-01-08T08:00:00-04:00
 weight: 2
 roadmap: "sgbd"
 tags: ["fundamentos", "iniciante"]
@@ -89,7 +89,7 @@ Tente criar um pedido para o cliente 99, que não existe:
 
 ```sql
 INSERT INTO dbo.Pedidos (ClienteId, DataPedido, Status)
-VALUES (99, '2026-09-22', N'Pendente');
+VALUES (99, '2026-01-10', N'Pendente');
 ```
 
 Erro 547: *The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Pedidos_Clientes"*. O banco se recusou a gravar um pedido "órfão".

@@ -1,7 +1,7 @@
 ---
 title: "Cliente-servidor: o caminho da sua query até o banco"
 description: "Conexão, sessão, request e batch: o que acontece entre apertar F5 e ver o resultado, e o que o GO realmente faz."
-date: 2026-09-22T08:06:00-04:00
+date: 2026-01-22T08:00:00-04:00
 weight: 6
 roadmap: "cliente-servidor"
 tags: ["fundamentos", "iniciante"]

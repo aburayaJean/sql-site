@@ -1,7 +1,7 @@
 ---
 title: "Servidor, instância, banco, schema e tabela: quem mora dentro de quem"
 description: "A hierarquia de objetos do SQL Server explicada com uma analogia simples, o nome de quatro partes e por que você deve sempre escrever o schema."
-date: 2026-09-22T08:05:00-04:00
+date: 2026-01-19T08:00:00-04:00
 weight: 5
 roadmap: "instancia-banco"
 tags: ["fundamentos", "iniciante"]
