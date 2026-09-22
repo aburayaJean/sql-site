@@ -29,3 +29,7 @@ defaultContentLanguage = "pt"
     name = "Tags"
     url = "/tags/"
     weight = 40
+  [[menu.main]]
+    name = "Contato"
+    url = "/contato/"
+    weight = 50
