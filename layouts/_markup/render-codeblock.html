@@ -1,10 +1,8 @@
 {{/*
-  Override de render-codeblock.html para contornar o bug do Hextra
-  que tenta acessar .enable em site.Params.highlight quando ele é um bool.
-  Usa o highlight nativo do Hugo (chroma) com botão de cópia via JS.
+  Override de render-codeblock.html — contorna o bug do Hextra que tenta acessar
+  .enable em site.Params.highlight quando ele é um bool em vez de um mapa.
 */}}
 {{- $lang := .Type -}}
-{{- $code := .Inner -}}
 {{- $highlightParams := site.Params.highlight -}}
 {{- $enableCopy := false -}}
 {{- if reflect.IsMap $highlightParams -}}
@@ -20,5 +18,5 @@
     </button>
   </div>
   {{- end -}}
-  {{ highlight $code $lang "" }}
+  {{ highlight .Inner $lang "" }}
 </div>

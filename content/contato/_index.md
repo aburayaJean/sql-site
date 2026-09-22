@@ -40,7 +40,6 @@ Quer tirar uma dúvida, sugerir um tema ou trocar uma ideia sobre SQL e bancos d
   gap: 16px;
   margin: 2rem 0;
 }
-
 .contato-btn {
   display: inline-flex;
   align-items: center;
@@ -54,23 +53,8 @@ Quer tirar uma dúvida, sugerir um tema ou trocar uma ideia sobre SQL e bancos d
   min-width: 180px;
   justify-content: center;
 }
-
-.contato-btn:hover {
-  opacity: 0.88;
-  transform: translateY(-2px);
-}
-
-.contato-btn.whatsapp {
-  background: #25D366;
-  color: #fff !important;
-}
-
-.contato-btn.email {
-  background: #0070f3;
-  color: #fff !important;
-}
-
-@media (max-width: 480px) {
-  .contato-btn { width: 100%; }
-}
+.contato-btn:hover { opacity: 0.88; transform: translateY(-2px); }
+.contato-btn.whatsapp { background: #25D366; color: #fff !important; }
+.contato-btn.email { background: #0070f3; color: #fff !important; }
+@media (max-width: 480px) { .contato-btn { width: 100%; } }
 </style>

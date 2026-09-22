@@ -1,6 +1,6 @@
 baseURL = "https://aburayaJean.github.io/sql-site/"
 languageCode = "pt-BR"
-title = "SQL with Jean"
+title = "Precisando de SQL? Chegou ao lugar certo."
 theme = "hextra"
 defaultContentLanguage = "pt"
 enableRobotsTXT = true
@@ -15,7 +15,7 @@ enableGitInfo = true
     noClasses = false
 
 [params]
-  description = "Aprenda SQL do básico ao avançado com exemplos práticos e scripts prontos para baixar."
+  description = "Aqui temos o objetivo de compartilhar conhecimento, compartilhar scripts, ajudar com tarefas simples e complexas. Sinta-se em casa e entre em contato se precisar de ajuda."
   displayUpdatedDate = false
   dateFormat = "02 Jan 2006"
 
