@@ -119,5 +119,3 @@ Ele cria o banco **Loja** com as tabelas `Clientes`, `Produtos`, `Pedidos` e `It
 No fim da execução aparece uma conferência com a quantidade de linhas de cada tabela: 8 clientes, 8 produtos, 12 pedidos e 18 itens.
 
 ---
-
-**Próximo post:** Relacional ou NoSQL? E onde o SQL Server entra nessa história.
