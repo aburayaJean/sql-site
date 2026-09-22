@@ -16,8 +16,8 @@ toc: false
 ## Como o blog funciona
 
 {{< cards >}}
-  {{< card link="/teoria/" title="Teoria" subtitle="O que é, para que serve, quando e por que usar. Cada post explica um conceito do zero, sem enrolação." icon="book-open" >}}
-  {{< card link="/pratica/" title="Prática" subtitle="O conceito em ação: scripts comentados, planos de execução, comparações lado a lado. Cada post de prática tem um de teoria correspondente." icon="code" >}}
+  {{< card link="teoria" title="Teoria" subtitle="O que é, para que serve, quando e por que usar. Cada post explica um conceito do zero, sem enrolação." icon="book-open" >}}
+  {{< card link="pratica" title="Prática" subtitle="O conceito em ação: scripts comentados, planos de execução, comparações lado a lado. Cada post de prática tem um de teoria correspondente." icon="code" >}}
 {{< /cards >}}
 
 ---
@@ -36,6 +36,6 @@ Cada par teoria + prática é independente — você pode começar por qualquer 
 ## Outros recursos
 
 {{< cards >}}
-  {{< card link="/downloads/" title="Downloads" subtitle="Todos os scripts do blog em um só lugar, organizados por tema. Copie, adapte, use." icon="download" >}}
-  {{< card link="/contato/" title="Fala comigo" subtitle="Dúvida, sugestão, pedido de post ou só quer trocar uma ideia sobre SQL e bancos de dados." icon="mail" >}}
+  {{< card link="downloads" title="Downloads" subtitle="Todos os scripts do blog em um só lugar, organizados por tema. Copie, adapte, use." icon="download" >}}
+  {{< card link="contato" title="Fala comigo" subtitle="Dúvida, sugestão, pedido de post ou só quer trocar uma ideia sobre SQL e bancos de dados." icon="mail" >}}
 {{< /cards >}}
