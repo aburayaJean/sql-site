@@ -1,35 +1,68 @@
 baseURL = "https://aburayaJean.github.io/sql-site/"
 languageCode = "pt-BR"
 title = "SQL with Jean"
-theme = "PaperMod"
+theme = "hextra"
 defaultContentLanguage = "pt"
+enableRobotsTXT = true
+enableGitInfo = true
+
+# Permite HTML cru no Markdown (botões de contato, download etc.)
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
 
 [params]
-  ShowCodeCopyButtons = true
-  defaultTheme = "auto"
-  homeInfoParams = { Title = "SQL with Jean 🗄️", Content = "Aprenda SQL do básico ao avançado com exemplos práticos e scripts prontos para baixar." }
-  ShowReadingTime = true
-  ShowShareButtons = false
-  ShowPostNavLinks = true
+  description = "Aprenda SQL do básico ao avançado com exemplos práticos e scripts prontos para baixar."
+  displayUpdatedDate = false
+  dateFormat = "02 Jan 2006"
+
+  [params.navbar]
+    displayTitle = true
+    displayLogo = false
+    widthClass = "max-w-screen-xl"
+
+  [params.footer]
+    enable = true
+    displayCopyright = true
+    displayPoweredBy = false
+    width = "normal"
+
+  [params.search]
+    enable = true
+    type = "flexsearch"
+
+  [params.highlight]
+    copy = true
+    copyNotification = true
 
 [menu]
   [[menu.main]]
     name = "Teoria"
-    url = "/teoria/"
+    pageRef = "/teoria"
     weight = 10
+
   [[menu.main]]
     name = "Prática"
-    url = "/pratica/"
+    pageRef = "/pratica"
     weight = 20
+
   [[menu.main]]
     name = "Downloads"
-    url = "/downloads/"
+    pageRef = "/downloads"
     weight = 30
-  [[menu.main]]
-    name = "Tags"
-    url = "/tags/"
-    weight = 40
+
   [[menu.main]]
     name = "Contato"
-    url = "/contato/"
+    pageRef = "/contato"
+    weight = 40
+
+  [[menu.main]]
+    name = "GitHub"
+    url = "https://github.com/aburayaJean/sql-site"
     weight = 50
+    [menu.main.params]
+      type = "icon"
+      icon = "github"
